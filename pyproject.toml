@@ -1,0 +1,23 @@
+[project]
+name = "jetlink-model-index"
+version = "0.1.0"
+description = "Which ONNX each big comma driving model is, for jetlink"
+requires-python = ">=3.12"
+license = "MIT"
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 160
+indent-width = 2
+lint.select = ["E", "F", "W", "PIE", "C4", "ISC", "A", "B", "UP", "B904", "B905", "RUF100"]
+lint.ignore = ["E741"]
+
+[tool.ruff.format]
+quote-style = "preserve"

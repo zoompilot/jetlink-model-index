@@ -1,0 +1,78 @@
+name: index
+
+# Hourly: look for new big models, resolve each to its ONNX, publish index/v1.json.
+# Run it by hand with history to rebuild from every catalog sunnypilot and jetlink
+# ever published and all of comma master, or recheck to match every pkl again.
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+    inputs:
+      history:
+        description: read every past catalog and all of comma master
+        type: boolean
+        default: false
+      recheck:
+        description: match every pkl again, even ones already matched
+        type: boolean
+        default: false
+      max_gb:
+        description: download budget for this run in GB (blank for the default)
+        default: ''
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: index
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # which catalogs and pull requests were already read; losing it costs requests, not results
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: sources-${{ github.run_id }}
+          restore-keys: sources-
+      - name: Index
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python -m model_index.build --work "$RUNNER_TEMP"
+          ${{ inputs.max_gb && format('--max-gb {0}', inputs.max_gb) || '' }}
+          ${{ inputs.history && '--history' || '' }}
+          ${{ inputs.recheck && '--recheck' || '' }}
+      - name: Commit
+        run: |
+          git config user.name 'jetlink-model-index'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state.json index library
+          if ! git diff --cached --quiet; then
+            git commit -q -m "index: $(cat summary.txt)"
+            git push
+          fi
+      - name: Report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          open=$(gh issue list --label unresolved --state open --json number --jq '.[0].number' 2>/dev/null || true)
+          if [ -s report.md ]; then
+            { echo 'The last index run could not settle these. Add an entry to `overrides.json` for any that will not resolve on their own.'; echo; cat report.md; } > body.md
+            if [ -n "$open" ]; then
+              gh issue edit "$open" --body-file body.md
+            else
+              gh label create unresolved --color d93f0b --description 'a model the index could not resolve' --force
+              gh issue create --title 'Unresolved models' --label unresolved --body-file body.md
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --comment 'Everything resolves again.'
+          fi

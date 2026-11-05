@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+.cache/
+report.md
+notes.md
+summary.txt
+body.md
+*.part
