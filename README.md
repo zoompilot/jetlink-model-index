@@ -17,10 +17,12 @@ and every comma reads the answer.
 ```json
 {
   "schema": 1,
+  "default": "<comma commit>",
   "refs":   { "<comma commit>": { "oid": "<onnx sha256>", "size": 792305602, "method": "tree|weights|checkpoint|..." } },
   "onnx":   { "<onnx sha256>": { "size": 792305602, "export": "f22b8b34-.../16384/big_driving_supercombo.onnx" } },
   "models": [ { "ref": "...", "oid": "...", "size": 0, "name": "Light Speed Model v2 (October 29, 2026)", "folder": "2026 Deep RL Models",
-                "catalog": "driving_models_chestnut_v28", "index": 19, "is_20hz": true, "minimum_selector_version": "21" } ],
+                "catalog": "driving_models_chestnut_v28", "short_name": "LS2", "index": 19, "is_20hz": true,
+                "minimum_selector_version": "21", "generation": "12", "environment": "development", "runner": "tinygrad" } ],
   "unresolved": { "<comma commit>": "why" }
 }
 ```
@@ -32,9 +34,12 @@ and every comma reads the answer.
   entry, "v2"). An open comma pull request whose ONNX no catalog lists yet goes in the
   `comma Pull Requests` folder, and drops out when the PR closes or sunnypilot catalogs it.
   `overrides.json` `folders` (`{"<ref>": "Folder"}`) moves any entry.
-  Each entry has `ref`, `oid`, `size`, `name` and `folder`; one from a catalog also has that
-  entry's `short_name`, `index`, `is_20hz`, `minimum_selector_version` and `build_time`, and one from
-  a pull request its `pr`.
+  Each entry has `ref`, `oid`, `size`, `name`, `folder` and `short_name`. One from a catalog also
+  has that entry's `index`, `is_20hz`, `minimum_selector_version`, `build_time`, `generation`,
+  `environment` and `runner`; one from a pull request has its `pr`, a short name of `#<pr>`, and the
+  newest catalog model's `is_20hz`, `generation`, `environment` and `runner`.
+- `default` is the model a Jetson runs with nothing picked: `overrides.json` `default`, as the list
+  names it (its own entry, or the one listing its ONNX). Changing it needs no release.
 - The bytes behind an oid are on comma's LFS servers: the HuggingFace bucket `commaai/openpilot-lfs`
   (where comma's own LFS client stores objects since #39206), the older GitLab and HuggingFace
   `openpilot-lfs` LFS endpoints, and HuggingFace `openpilot_driving_models` for exports.

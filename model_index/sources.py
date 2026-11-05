@@ -36,7 +36,8 @@ JETLINK_EXTRA = f'https://raw.githubusercontent.com/{JETLINK}/refs/heads/main/ca
 HF_TREE = f'https://huggingface.co/api/models/{lfs.DRIVING_MODELS_REPO}/tree/main?recursive=true'
 _REF = re.compile(r'[0-9a-f]{40}')
 # what a catalog entry carries that a model list needs
-LISTING = ('short_name', 'display_name', 'is_20hz', 'index', 'minimum_selector_version', 'overrides', 'build_time', 'environment')
+LISTING = ('short_name', 'display_name', 'is_20hz', 'index', 'minimum_selector_version', 'overrides', 'build_time', 'environment',
+           'generation', 'runner')
 
 
 @dataclass
@@ -103,8 +104,9 @@ def sunnypilot(found: dict[str, Seen], cache: dict) -> None:
   for name in set(cache) - set(listed):
     del cache[name]
   for name, sha in sorted(listed.items()):
-    if cache.get(name, {}).get('sha') != sha:
-      cache[name] = {'sha': sha, 'bundles': _bundles(net.get_json(SP_RAW.format(name=name)), _sunnypilot_big_only(name))}
+    # cut to LISTING: a cache cut to other fields is fetched again
+    if cache.get(name, {}).get('sha') != sha or cache[name].get('fields') != list(LISTING):
+      cache[name] = {'sha': sha, 'fields': list(LISTING), 'bundles': _bundles(net.get_json(SP_RAW.format(name=name)), _sunnypilot_big_only(name))}
     _catalog(found, cache[name]['bundles'], f'sunnypilot:{name}', name.removesuffix('.json'))
 
 

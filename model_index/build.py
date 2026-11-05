@@ -60,6 +60,10 @@ GONE_RECHECK = 7 * 86400
 STALE = 2 * 86400
 PROBE_THREADS = 16
 PR_FOLDER = 'comma Pull Requests'
+# what a listed model carries of its catalog entry, all a catalog in sunnypilot's shape needs
+CATALOG_FIELDS = ('short_name', 'is_20hz', 'index', 'minimum_selector_version', 'build_time', 'generation', 'environment', 'runner')
+# what a pull request's model takes from the newest catalog model: the runtime it was built for
+RUNTIME_FIELDS = ('is_20hz', 'generation', 'environment', 'runner')
 COMMIT_PATCH_URL = 'https://github.com/commaai/openpilot/commit/{ref}.patch'
 PULL_PATCH_URL = 'https://github.com/commaai/openpilot/pull/{number}.patch'
 PATCH_MAX = 1 << 20
@@ -157,6 +161,8 @@ class Run:
     self.cache.setdefault('prs', {})
     overrides = _read(OVERRIDES, {})
     self.overrides, self.folders = overrides.get('refs', {}), overrides.get('folders', {})
+    # the model a Jetson runs with nothing picked, by its ref
+    self.default: str | None = overrides.get('default')
     # refs a human settled outright; an `accept` override only quiets the report
     self.settled = {ref for ref, o in self.overrides.items() if 'unavailable' in o or 'oid' in o}
     self.library = {p.stem: _read(p, None) for p in sorted(LIBRARY.glob('*.json'))}
@@ -381,8 +387,10 @@ class Run:
 
   def models(self, resolved: set[str]) -> list[dict]:
     """What a Jetson can pick: one entry per ONNX, under the newest catalog
-    entry that has it, in that entry's folder. An open comma pull request
-    whose ONNX nothing else lists goes in PR_FOLDER."""
+    entry that has it, in that entry's folder, with the entry's CATALOG_FIELDS.
+    An open comma pull request whose ONNX nothing else lists goes in
+    PR_FOLDER, with the newest catalog model's RUNTIME_FIELDS. Every entry has
+    a short name."""
     best: dict[str, tuple] = {}
     for ref, e in self.refs.items():
       if ref not in resolved:
@@ -390,18 +398,24 @@ class Run:
       if e.get('listing'):
         catalog, listing = max(e['listing'].items(), key=lambda kv: (_catalog_rank(kv[0]), int(kv[1].get('index', 0))))
         model = {'name': listing.get('display_name') or ref[:10], 'folder': _folder(listing), 'catalog': catalog,
-                 **{k: listing[k] for k in ('short_name', 'is_20hz', 'index', 'minimum_selector_version', 'build_time') if k in listing}}
+                 **{k: listing[k] for k in CATALOG_FIELDS if k in listing}}
         rank = (1, _catalog_rank(catalog), int(listing.get('index', 0)))
       elif e.get('pr') and e.get('open'):
         name = next((n for n in e.get('names', []) if n.startswith(f'#{e["pr"]} ')), f'#{e["pr"]}')
-        model, rank = {'name': name, 'folder': PR_FOLDER, 'pr': e['pr']}, (0, (False, 0), e['pr'])
+        model, rank = {'name': name, 'folder': PR_FOLDER, 'pr': e['pr'], 'short_name': f'#{e["pr"]}'}, (0, (False, 0), e['pr'])
       else:
         continue
       model = {'ref': ref, 'oid': e['oid'], 'size': e['size'], **model}
       model['folder'] = self.folders.get(ref) or model['folder'] or 'Other Models'
+      model['short_name'] = model.get('short_name') or ref[:7]
       if e['oid'] not in best or rank > best[e['oid']][0]:
         best[e['oid']] = (rank, model)
-    folders = list(dict.fromkeys(m['folder'] for _, m in sorted(best.values(), key=lambda rm: rm[0], reverse=True)))
+    ranked = [m for _, m in sorted(best.values(), key=lambda rm: rm[0], reverse=True)]
+    newest = next((m for m in ranked if 'pr' not in m), {})
+    for m in ranked:
+      if 'pr' in m:
+        m.update({k: newest[k] for k in RUNTIME_FIELDS if k in newest})
+    folders = list(dict.fromkeys(m['folder'] for m in ranked))
     return sorted((m for _, m in best.values()), key=lambda m: (m['folder'] == PR_FOLDER, folders.index(m['folder']),
                                                                  -int(m.get('index', m.get('pr', 0)))))
 
@@ -413,11 +427,21 @@ class Run:
       else:
         unresolved[ref] = e.get('reason') or e.get('status') or 'not looked at yet'
     onnx = {o: {'size': x['size'], 'export': x.get('export')} for o, x in sorted(self.library.items())}
-    return {'schema': SCHEMA, 'refs': refs, 'onnx': onnx, 'models': self.models(set(refs)), 'unresolved': unresolved}
+    models = self.models(set(refs))
+    return {'schema': SCHEMA, 'default': self.listed_default(models, refs), 'refs': refs, 'onnx': onnx, 'models': models,
+            'unresolved': unresolved}
+
+  def listed_default(self, models: list[dict], refs: dict) -> str | None:
+    """overrides.json's default as the list names it: its own entry, or the
+    one listing its ONNX. None when it lists neither, which reports() says."""
+    oid = (refs.get(self.default) or {}).get('oid')
+    return next((m['ref'] for m in models if m['ref'] == self.default), None) or next((m['ref'] for m in models if m['oid'] == oid), None)
 
   def reports(self) -> tuple[str, str]:
     """(what needs a human, everything else worth a look)."""
     human, info = [], []
+    if self.default and self.listed_default(self.models(set(self.refs)), {r: e for r, e in self.refs.items() if e.get('oid')}) is None:
+      human.append(f'- the default `{self.default}` (overrides.json) is not listed: a Jetson with nothing picked runs its own fallback')
     for ref, e in sorted(self.refs.items()):
       name = ', '.join(e.get('names', [])[:2]) or '(no name)'
       stale = ref not in self.overrides and self.now - e.get('since', self.now) > STALE

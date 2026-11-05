@@ -54,6 +54,28 @@ def test_models_collapse_one_onnx_to_the_newest_entry(tmp_path, monkeypatch):
   assert [(m['ref'], m['name'], m['folder']) for m in models] == [('v2', 'Light Speed v2', 'Deep RL'), ('pr_new', '#10 Light speed 2', build.PR_FOLDER)]
 
 
+def test_every_model_carries_what_a_catalog_needs_and_the_default_is_listed(tmp_path, monkeypatch):
+  monkeypatch.setattr(build, 'STATE', tmp_path / 'state.json')
+  monkeypatch.setattr(build, 'LIBRARY', tmp_path / 'library')
+  monkeypatch.setattr(build, 'OVERRIDES', tmp_path / 'overrides.json')
+  (tmp_path / 'overrides.json').write_text('{"default": "v1"}')
+  run = build.Run(tmp_path, 0, False)
+  listing = {'display_name': 'Light Speed v2', 'index': 19, 'is_20hz': True, 'generation': '12', 'environment': 'development',
+             'runner': 'tinygrad', 'build_time': '2026-10-29T00:00:00Z', 'overrides': {'folder': 'Deep RL'}}
+  run.refs.update({
+    'v1': {'status': 'resolved', 'oid': OID_A, 'size': 1, 'method': 'tree'},
+    'v2': {'status': 'resolved', 'oid': OID_A, 'size': 1, 'method': 'tree', 'listing': {'driving_models_chestnut_v28': listing}},
+    'pr': {'status': 'resolved', 'oid': OID_B, 'size': 1, 'method': 'tree', 'pr': 10, 'open': True, 'names': ['#10 Light speed 2']},
+  })
+  index = run.index()
+  v2, pr = index['models']
+  assert (v2['short_name'], v2['generation'], v2['runner'], v2['build_time']) == ('v2', '12', 'tinygrad', '2026-10-29T00:00:00Z')
+  assert (pr['short_name'], pr['generation'], pr['environment'], pr['is_20hz']) == ('#10', '12', 'development', True)
+  # the default is named as the list names its ONNX
+  assert index['default'] == 'v2'
+  assert run.reports()[0] == ''
+
+
 def test_unchecked_answers_reach_the_issue_after_two_days(tmp_path, monkeypatch):
   monkeypatch.setattr(build, 'STATE', tmp_path / 'state.json')
   monkeypatch.setattr(build, 'LIBRARY', tmp_path / 'library')
