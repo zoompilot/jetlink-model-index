@@ -390,7 +390,7 @@ class Run:
       if e.get('listing'):
         catalog, listing = max(e['listing'].items(), key=lambda kv: (_catalog_rank(kv[0]), int(kv[1].get('index', 0))))
         model = {'name': listing.get('display_name') or ref[:10], 'folder': _folder(listing), 'catalog': catalog,
-                 **{k: listing[k] for k in ('short_name', 'is_20hz', 'index', 'minimum_selector_version') if k in listing}}
+                 **{k: listing[k] for k in ('short_name', 'is_20hz', 'index', 'minimum_selector_version', 'build_time') if k in listing}}
         rank = (1, _catalog_rank(catalog), int(listing.get('index', 0)))
       elif e.get('pr') and e.get('open'):
         name = next((n for n in e.get('names', []) if n.startswith(f'#{e["pr"]} ')), f'#{e["pr"]}')

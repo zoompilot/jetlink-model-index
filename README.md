@@ -32,6 +32,9 @@ and every comma reads the answer.
   entry, "v2"). An open comma pull request whose ONNX no catalog lists yet goes in the
   `comma Pull Requests` folder, and drops out when the PR closes or sunnypilot catalogs it.
   `overrides.json` `folders` (`{"<ref>": "Folder"}`) moves any entry.
+  Each entry has `ref`, `oid`, `size`, `name` and `folder`; one from a catalog also has that
+  entry's `short_name`, `index`, `is_20hz`, `minimum_selector_version` and `build_time`, and one from
+  a pull request its `pr`.
 - The bytes behind an oid are on comma's LFS servers: the HuggingFace bucket `commaai/openpilot-lfs`
   (where comma's own LFS client stores objects since #39206), the older GitLab and HuggingFace
   `openpilot-lfs` LFS endpoints, and HuggingFace `openpilot_driving_models` for exports.
