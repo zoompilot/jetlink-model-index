@@ -29,6 +29,8 @@ BIG_ONNX = 'big_driving_supercombo.onnx'
 BIG_PKL = 'big_driving_tinygrad.pkl'
 RAW_URL = 'https://raw.githubusercontent.com/commaai/openpilot/{ref}/{path}'
 DRIVING_MODELS_REPO = 'commaai/openpilot_driving_models'
+# where comma's own LFS client has stored objects since #39206 (2026-11-05)
+BUCKET = 'https://huggingface.co/buckets/commaai/openpilot-lfs/resolve/sha256/{oid}'
 ENDPOINTS = (
   'https://gitlab.com/commaai/openpilot-lfs.git/info/lfs',
   'https://huggingface.co/commaai/openpilot-lfs.git/info/lfs',
@@ -138,6 +140,7 @@ def _sources(pointer: Pointer):
   if pointer.url:
     yield pointer.url, pointer.url
   else:
+    yield 'bucket', BUCKET.format(oid=pointer.oid)
     yield from hrefs(pointer)
 
 
