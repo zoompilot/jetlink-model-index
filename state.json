@@ -391,6 +391,7 @@
      "build_time": "2026-08-20T21:24:36Z",
      "display_name": "TTTTFBRLM (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 2,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -399,12 +400,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTTTFBRL"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T07:49:46Z",
      "display_name": "TTTTFBRLM (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 2,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -413,12 +416,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTTTFBRL"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T07:49:46Z",
      "display_name": "TTTTFBRLM (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 2,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -427,12 +432,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTTTFBRL"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T07:49:46Z",
      "display_name": "TTTTFBRLM (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 2,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -441,12 +448,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTTTFBRL"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T07:49:46Z",
      "display_name": "TTTTFBRLM (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 2,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -455,12 +464,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTTTFBRL"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T22:55:31Z",
      "display_name": "TTTTFBRLM (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 2,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -469,12 +480,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTTTFBRL"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T18:26:41Z",
      "display_name": "TTTTFBRLM (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 2,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -483,6 +496,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTTTFBRL"
     }
    },
@@ -537,6 +551,7 @@
      "build_time": "2026-10-14T20:59:21Z",
      "display_name": "Mountain Dew Model v3 (October 14, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 15,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -545,6 +560,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "MDMV3"
     }
    },
@@ -695,6 +711,7 @@
      "build_time": "2026-08-28T19:56:35Z",
      "display_name": "Sad Model (August 28, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 8,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -703,12 +720,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "SM"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T05:49:40Z",
      "display_name": "Sad Model (August 28, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 8,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -717,12 +736,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "SM"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T05:49:40Z",
      "display_name": "Sad Model (August 28, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 8,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -731,12 +752,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "SM"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T05:49:40Z",
      "display_name": "Sad Model (August 28, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 8,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -745,12 +768,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "SM"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T05:49:40Z",
      "display_name": "Sad Model (August 28, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 8,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -759,12 +784,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "SM"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T21:59:42Z",
      "display_name": "Sad Model (August 28, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 8,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -773,12 +800,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "SM"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T16:37:52Z",
      "display_name": "Sad Model (August 28, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 8,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -787,6 +816,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "SM"
     }
    },
@@ -838,6 +868,7 @@
      "build_time": "2026-10-24T18:35:41Z",
      "display_name": "Flip Flop Model (October 23, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 17,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -846,6 +877,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "FFM"
     }
    },
@@ -931,6 +963,7 @@
      "build_time": "2026-10-06T23:00:35Z",
      "display_name": "Cinque Terre Model V2 (September 08, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 12,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -939,12 +972,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTMV2"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-08T23:11:14Z",
      "display_name": "Cinque Terre Model V2 (September 08, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 12,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -953,12 +988,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTMV2"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T20:13:26Z",
      "display_name": "Cinque Terre Model V2 (September 08, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 12,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -967,12 +1004,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTMV2"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T17:13:02Z",
      "display_name": "Cinque Terre Model V2 (September 08, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 12,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -981,6 +1020,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTMV2"
     }
    },
@@ -1108,6 +1148,7 @@
      "build_time": "2026-08-27T03:12:45Z",
      "display_name": "BMRLNAP Model v3 (August 26, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 7,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -1116,12 +1157,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV3"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T06:21:43Z",
      "display_name": "BMRLNAP Model v3 (August 26, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 7,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1130,12 +1173,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV3"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T06:21:43Z",
      "display_name": "BMRLNAP Model v3 (August 26, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 7,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1144,12 +1189,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV3"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T06:21:43Z",
      "display_name": "BMRLNAP Model v3 (August 26, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 7,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1158,12 +1205,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV3"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T06:21:43Z",
      "display_name": "BMRLNAP Model v3 (August 26, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 7,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1172,12 +1221,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV3"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T22:13:42Z",
      "display_name": "BMRLNAP Model v3 (August 26, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 7,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -1186,12 +1237,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV3"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T18:42:51Z",
      "display_name": "BMRLNAP Model v3 (August 26, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 7,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -1200,6 +1253,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV3"
     }
    },
@@ -1461,6 +1515,7 @@
      "build_time": "2026-08-21T23:23:46Z",
      "display_name": "I Desire Model (August 21, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 4,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -1469,12 +1524,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "IDM"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T07:16:10Z",
      "display_name": "I Desire Model (August 21, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 4,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1483,12 +1540,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "IDM"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T07:16:10Z",
      "display_name": "I Desire Model (August 21, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 4,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1497,12 +1556,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "IDM"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T07:16:10Z",
      "display_name": "I Desire Model (August 21, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 4,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1511,12 +1572,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "IDM"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T07:16:10Z",
      "display_name": "I Desire Model (August 21, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 4,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1525,12 +1588,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "IDM"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T21:09:35Z",
      "display_name": "I Desire Model (August 21, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 4,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -1539,12 +1604,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "IDM"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T19:40:15Z",
      "display_name": "I Desire Model (August 21, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 4,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -1553,6 +1620,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "IDM"
     }
    },
@@ -1674,6 +1742,7 @@
      "build_time": "2026-10-06T22:48:13Z",
      "display_name": "Cinque Terre Model (September 04, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 11,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1682,12 +1751,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTM"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-05T21:23:01Z",
      "display_name": "Cinque Terre Model (September 04, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 11,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1696,12 +1767,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTM"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T21:32:35Z",
      "display_name": "Cinque Terre Model (September 04, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 11,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -1710,12 +1783,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTM"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T16:47:37Z",
      "display_name": "Cinque Terre Model (September 04, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 11,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -1724,6 +1799,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTM"
     }
    },
@@ -1770,6 +1846,7 @@
      "build_time": "2026-10-14T17:00:01Z",
      "display_name": "Mountain Dew Model (October 10, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 14,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -1778,6 +1855,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "MDM"
     }
    },
@@ -1899,6 +1977,7 @@
      "build_time": "2026-08-21T19:37:37Z",
      "display_name": "BMRLNAP Model (August 20, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 3,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -1907,12 +1986,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BM"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T06:05:02Z",
      "display_name": "BMRLNAP Model (August 20, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 3,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1921,12 +2002,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BM"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T06:05:02Z",
      "display_name": "BMRLNAP Model (August 20, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 3,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1935,12 +2018,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BM"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T06:05:02Z",
      "display_name": "BMRLNAP Model (August 20, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 3,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1949,12 +2034,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BM"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T06:05:02Z",
      "display_name": "BMRLNAP Model (August 20, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 3,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -1963,12 +2050,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BM"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T21:47:18Z",
      "display_name": "BMRLNAP Model (August 20, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 3,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -1977,12 +2066,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BM"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T17:54:27Z",
      "display_name": "BMRLNAP Model (August 20, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 3,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -1991,6 +2082,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BM"
     }
    },
@@ -2177,6 +2269,7 @@
      "build_time": "2026-09-02T03:06:35Z",
      "display_name": "BMRLNAP Model v6 (September 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 10,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2185,12 +2278,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV6"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-02T03:06:35Z",
      "display_name": "BMRLNAP Model v6 (September 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 10,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2199,12 +2294,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV6"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-02T03:06:35Z",
      "display_name": "BMRLNAP Model v6 (September 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 10,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2213,12 +2310,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV6"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-02T03:06:35Z",
      "display_name": "BMRLNAP Model v6 (September 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 10,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2227,12 +2326,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV6"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T21:22:44Z",
      "display_name": "BMRLNAP Model v6 (September 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 10,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -2241,12 +2342,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV6"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T19:24:05Z",
      "display_name": "BMRLNAP Model v6 (September 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 10,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -2255,6 +2358,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV6"
     }
    },
@@ -2458,6 +2562,7 @@
      "build_time": "2026-11-05T21:21:11Z",
      "display_name": "Light Speed 2 (November 04, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 20,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -2466,6 +2571,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LS2"
     }
    },
@@ -2537,6 +2643,7 @@
      "build_time": "2026-08-25T04:39:15Z",
      "display_name": "BMRLNAP Model v2 (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 6,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -2545,12 +2652,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV2"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T06:59:13Z",
      "display_name": "BMRLNAP Model v2 (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 6,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2559,12 +2668,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV2"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T06:59:13Z",
      "display_name": "BMRLNAP Model v2 (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 6,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2573,12 +2684,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV2"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T06:59:13Z",
      "display_name": "BMRLNAP Model v2 (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 6,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2587,12 +2700,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV2"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T06:59:13Z",
      "display_name": "BMRLNAP Model v2 (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 6,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2601,12 +2716,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV2"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T20:37:27Z",
      "display_name": "BMRLNAP Model v2 (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 6,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -2615,12 +2732,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV2"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T17:37:33Z",
      "display_name": "BMRLNAP Model v2 (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 6,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -2629,6 +2748,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV2"
     }
    },
@@ -2734,6 +2854,7 @@
      "build_time": "2026-09-19T18:23:24Z",
      "display_name": "Cinque Terre V3 Model (September 17, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 13,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -2742,12 +2863,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTV3M"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T22:24:53Z",
      "display_name": "Cinque Terre V3 Model (September 17, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 13,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -2756,12 +2879,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTV3M"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T16:28:04Z",
      "display_name": "Cinque Terre V3 Model (September 17, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 13,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -2770,6 +2895,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "CTV3M"
     }
    },
@@ -2901,6 +3027,7 @@
      "build_time": "2026-10-30T08:59:39Z",
      "display_name": "Light Speed Model v1.1 (October 29, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 19,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -2909,6 +3036,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LSMV1.1"
     }
    },
@@ -3021,6 +3149,7 @@
      "build_time": "2026-08-24T17:42:02Z",
      "display_name": "Happy Birthday Model (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 5,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -3029,12 +3158,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "HBM"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T07:32:34Z",
      "display_name": "Happy Birthday Model (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 5,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3043,12 +3174,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "HBM"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T07:32:34Z",
      "display_name": "Happy Birthday Model (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 5,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3057,12 +3190,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "HBM"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T07:32:34Z",
      "display_name": "Happy Birthday Model (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 5,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3071,12 +3206,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "HBM"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T07:32:34Z",
      "display_name": "Happy Birthday Model (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 5,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3085,12 +3222,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "HBM"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T20:53:29Z",
      "display_name": "Happy Birthday Model (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 5,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -3099,12 +3238,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "HBM"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T18:10:39Z",
      "display_name": "Happy Birthday Model (August 24, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 5,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -3113,6 +3254,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "HBM"
     }
    },
@@ -3187,6 +3329,7 @@
      "build_time": "2026-10-17T13:31:18Z",
      "display_name": "Train Track Model (October 16, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 16,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -3195,6 +3338,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TTM"
     }
    },
@@ -3236,6 +3380,7 @@
      "build_time": "2026-10-29T12:51:19Z",
      "display_name": "Light Speed Model (October 29, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 18,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -3244,6 +3389,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LSM"
     }
    },
@@ -3543,6 +3689,7 @@
      "build_time": "2026-08-31T01:14:09Z",
      "display_name": "BMRLNAP Model v4 (August 30, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 9,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -3551,12 +3698,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV4"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T05:39:17Z",
      "display_name": "BMRLNAP Model v4 (August 30, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 9,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3565,12 +3714,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV4"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T05:39:17Z",
      "display_name": "BMRLNAP Model v4 (August 30, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 9,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3579,12 +3730,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV4"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T05:39:17Z",
      "display_name": "BMRLNAP Model v4 (August 30, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 9,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3593,12 +3746,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV4"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T05:39:17Z",
      "display_name": "BMRLNAP Model v4 (August 30, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 9,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3607,12 +3762,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV4"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T20:23:19Z",
      "display_name": "BMRLNAP Model v4 (August 30, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 9,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -3621,12 +3778,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV4"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T17:22:39Z",
      "display_name": "BMRLNAP Model v4 (August 30, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 9,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -3635,6 +3794,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "BMV4"
     }
    },
@@ -3730,6 +3890,7 @@
      "build_time": "2026-08-23T21:58:51Z",
      "display_name": "Lebowski Model (July 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 0,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -3738,12 +3899,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LM"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T06:38:29Z",
      "display_name": "Lebowski Model (July 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 0,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3752,12 +3915,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LM"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T06:38:29Z",
      "display_name": "Lebowski Model (July 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 0,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3766,12 +3931,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LM"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T06:38:29Z",
      "display_name": "Lebowski Model (July 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 0,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3780,12 +3947,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LM"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T06:38:29Z",
      "display_name": "Lebowski Model (July 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 0,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3794,12 +3963,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LM"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T23:11:32Z",
      "display_name": "Lebowski Model (July 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 0,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -3808,12 +3979,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LM"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T17:00:54Z",
      "display_name": "Lebowski Model (July 01, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 0,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -3822,6 +3995,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "LM"
     }
    },
@@ -3919,6 +4093,7 @@
      "build_time": "2026-08-23T21:50:44Z",
      "display_name": "Tee Time (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 1,
      "is_20hz": true,
      "minimum_selector_version": "18",
@@ -3927,12 +4102,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TT"
     },
     "driving_models_chestnut_v23": {
      "build_time": "2026-09-01T10:49:49Z",
      "display_name": "Tee Time (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 1,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3941,12 +4118,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TT"
     },
     "driving_models_chestnut_v24": {
      "build_time": "2026-09-01T10:49:49Z",
      "display_name": "Tee Time (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 1,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3955,12 +4134,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TT"
     },
     "driving_models_chestnut_v25": {
      "build_time": "2026-09-01T10:49:49Z",
      "display_name": "Tee Time (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 1,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3969,12 +4150,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TT"
     },
     "driving_models_chestnut_v26": {
      "build_time": "2026-09-01T10:49:49Z",
      "display_name": "Tee Time (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 1,
      "is_20hz": true,
      "minimum_selector_version": "19",
@@ -3983,12 +4166,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TT"
     },
     "driving_models_chestnut_v27": {
      "build_time": "2026-09-30T22:38:51Z",
      "display_name": "Tee Time (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 1,
      "is_20hz": true,
      "minimum_selector_version": "20",
@@ -3997,12 +4182,14 @@
       "lat": ".1",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TT"
     },
     "driving_models_chestnut_v28": {
      "build_time": "2026-10-13T19:10:52Z",
      "display_name": "Tee Time (August 18, 2026)",
      "environment": "development",
+     "generation": "12",
      "index": 1,
      "is_20hz": true,
      "minimum_selector_version": "21",
@@ -4011,6 +4198,7 @@
       "lat": ".0",
       "long": ".3"
      },
+     "runner": "tinygrad",
      "short_name": "TT"
     }
    },
