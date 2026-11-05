@@ -288,6 +288,7 @@
     "bump tinygrad and recompile Chestnut models (#39176)"
    ],
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:master"
@@ -308,6 +309,7 @@
     "Mountain Dew Model (#39045)"
    ],
    "reason": "Mountain Dew (#39045), reverted in #39046: export ea1600cb was never published and comma no longer serves the pkl",
+   "since": 1793916136,
    "sources": [
     "comma:master"
    ],
@@ -321,6 +323,7 @@
    "oid": "909a140019050a9d7f00db22dd4f4085928d2af9474a82244672ddab964f95a8",
    "open": false,
    "pr": 39236,
+   "since": 1793916136,
    "size": 768749892,
    "sources": [
     "comma:pull"
@@ -489,6 +492,7 @@
     "TTTTFBRLM (August 18, 2026)"
    ],
    "oid": "1c90cac0bb2b8f25940b3cca3be41704b90a42857fc9e735b7df1d6983ae2554",
+   "since": 1793916136,
    "size": 1757101084,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -550,6 +554,7 @@
     "Mountain Dew Model v3 (October 14, 2026)"
    ],
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:master",
@@ -575,6 +580,7 @@
    "oid": "1563b85f6bd00d9e2edf50bdb69646f0d95d5ac0f218d5abe3fe54a13427d71b",
    "open": false,
    "pr": 39037,
+   "since": 1793916136,
    "size": 792485215,
    "sources": [
     "comma:pull"
@@ -596,6 +602,7 @@
     "bump tinygrad (#39085)"
    ],
    "oid": "87fe86ca0813c099efddf9173ba503be2e40ea4c5362c36812a44141f4cb07d4",
+   "since": 1793916136,
    "size": 792430559,
    "sources": [
     "comma:master"
@@ -617,6 +624,7 @@
     "ResAction Preview (October 05, 2026)"
    ],
    "oid": "1563b85f6bd00d9e2edf50bdb69646f0d95d5ac0f218d5abe3fe54a13427d71b",
+   "since": 1793916136,
    "size": 792485215,
    "sources": [
     "jetlink-history:extra_big_models.json",
@@ -787,6 +795,7 @@
     "Sad Model (August 28, 2026)"
    ],
    "oid": "3913109713cc782bdb001550a519f1fc6b36dbc7ade1cf6126622f044ff6adfb",
+   "since": 1793916136,
    "size": 766082665,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -845,6 +854,7 @@
     "Flip Flop Model (October 23, 2026)"
    ],
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v28.json",
@@ -979,6 +989,7 @@
     "Cinque Terre Model V2 (September 08, 2026)"
    ],
    "oid": "09d080f36965bb2a0790500452bd328aa03c484d0222aa79d1ad9f021a522aec",
+   "since": 1793916136,
    "size": 766040736,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v25.json",
@@ -1009,6 +1020,7 @@
     "Update tinygrad and use retargetable model artifacts (#38933)"
    ],
    "oid": "c7b300083b8dd6ce17545ef52edb6b577e3a805e6372f9f9343090604690242f",
+   "since": 1793916136,
    "size": 766320181,
    "sources": [
     "comma:master"
@@ -1032,6 +1044,7 @@
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "open": false,
    "pr": 39204,
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:pull"
@@ -1196,6 +1209,7 @@
     "BRMNPLSKJHFUEJGSTEST (August 26, 2026)"
    ],
    "oid": "9ef28165590af9be949230a36336e6d578bc656798e3d17c86656a2105460bea",
+   "since": 1793916136,
    "size": 1757861459,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -1233,6 +1247,7 @@
     "BMRLNAP (#38681)"
    ],
    "oid": "a086d5249fc308bb73993d1e64630c669d4c7df5bde85f42ad61902543648525",
+   "since": 1793916136,
    "size": 765953504,
    "sources": [
     "comma:master"
@@ -1252,6 +1267,7 @@
     "ResAction (#39037)"
    ],
    "oid": "1563b85f6bd00d9e2edf50bdb69646f0d95d5ac0f218d5abe3fe54a13427d71b",
+   "since": 1793916136,
    "size": 792485215,
    "sources": [
     "comma:master"
@@ -1279,6 +1295,7 @@
     "Mountain Dew V2 Preview (October 08, 2026)"
    ],
    "oid": "c392ba1aa1b4b89e850366024fa6c1beac1f1fdc3a7182e3c3b0234c55e08eeb",
+   "since": 1793916136,
    "size": 792487890,
    "sources": [
     "jetlink-history:extra_big_models.json"
@@ -1300,6 +1317,7 @@
     "Revert big RL model (#38627)"
    ],
    "oid": "a501760a9d1d5fef0eab2b8c5d122d06124fc26dc8e0782e0aa94b82a208f0ff",
+   "since": 1793916136,
    "size": 1757355221,
    "sources": [
     "comma:master"
@@ -1319,6 +1337,7 @@
     "mv root dirs into nested openpilot (#38219)"
    ],
    "oid": "471f372751d5931e939320c211e35b7255f8fa8015125b3b3fd48ef43020257e",
+   "since": 1793916136,
    "size": 195490097,
    "sources": [
     "comma:master"
@@ -1338,6 +1357,7 @@
     "Use a precompiled eGPU driving model (#38930)"
    ],
    "oid": "c7b300083b8dd6ce17545ef52edb6b577e3a805e6372f9f9343090604690242f",
+   "since": 1793916136,
    "size": 766320181,
    "sources": [
     "comma:master"
@@ -1359,6 +1379,7 @@
     "Cinque v2 (#38850)"
    ],
    "oid": "09d080f36965bb2a0790500452bd328aa03c484d0222aa79d1ad9f021a522aec",
+   "since": 1793916136,
    "size": 766040736,
    "sources": [
     "comma:master"
@@ -1378,6 +1399,7 @@
     "modeld: move history queues into ONNX (#38916)"
    ],
    "oid": "6fee5937923c74848df4a63f6239eb6331c6274dd4bdb7a5d6ec0388a8b543d5",
+   "since": 1793916136,
    "size": 766018462,
    "sources": [
     "comma:master"
@@ -1539,6 +1561,7 @@
     "I Desire Model (August 21, 2026)"
    ],
    "oid": "dcd96339cae7ca50a04377be1edd9574d9cba1cbec5ab91b142d77bd5248d6b9",
+   "since": 1793916136,
    "size": 1757087312,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -1709,6 +1732,7 @@
     "Cinque Terre Model (September 04, 2026)"
    ],
    "oid": "e8d821733be15ebe9e27498bc27ad8bbbd741980ece37d77f377294010b8ff28",
+   "since": 1793916136,
    "size": 765950064,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v24.json",
@@ -1763,6 +1787,7 @@
     "Mountain Dew Model (October 10, 2026)"
    ],
    "oid": "87fe86ca0813c099efddf9173ba503be2e40ea4c5362c36812a44141f4cb07d4",
+   "since": 1793916136,
    "size": 792430559,
    "sources": [
     "comma:master",
@@ -1790,6 +1815,7 @@
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "open": false,
    "pr": 39194,
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:pull"
@@ -1813,6 +1839,7 @@
    "oid": "c7b300083b8dd6ce17545ef52edb6b577e3a805e6372f9f9343090604690242f",
    "open": false,
    "pr": 38857,
+   "since": 1793916136,
    "size": 766320181,
    "sources": [
     "comma:pull"
@@ -1972,6 +1999,7 @@
     "BMRLNAP Model (August 20, 2026)"
    ],
    "oid": "57a3bf0c312dbf14c054b8f7f9282d1bc9216b44476f2c842c18bb9bca0a41f8",
+   "since": 1793916136,
    "size": 1764417969,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -2011,6 +2039,7 @@
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "open": false,
    "pr": 39176,
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:pull"
@@ -2034,6 +2063,7 @@
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "open": false,
    "pr": 39156,
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:pull"
@@ -2055,6 +2085,7 @@
     "modeld: tinygrad jit copies and update tinygrad (#39187)"
    ],
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:master"
@@ -2078,6 +2109,7 @@
    "oid": "87fe86ca0813c099efddf9173ba503be2e40ea4c5362c36812a44141f4cb07d4",
    "open": false,
    "pr": 39085,
+   "since": 1793916136,
    "size": 792430559,
    "sources": [
     "comma:pull"
@@ -2231,6 +2263,7 @@
     "BMRLNAP Model v6 (September 01, 2026)"
    ],
    "oid": "f3669cb7c8a9a8a13fcd6a8575958dd09a9ec76d9c9072ccdc76fad7cfa3a28d",
+   "since": 1793916136,
    "size": 765955335,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v23.json",
@@ -2265,6 +2298,7 @@
     "Flip Flop Model (#39156)"
    ],
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:master"
@@ -2286,6 +2320,7 @@
     "TGC (#38739)"
    ],
    "oid": "1791d5940b2c048d0639813426dd2cf1d6f2a6727ed51e17c8bcea8bbe754123",
+   "since": 1793916136,
    "size": 765950064,
    "sources": [
     "comma:master"
@@ -2305,6 +2340,7 @@
     "modeld: run the driving model as a single combined onnx (#38173)"
    ],
    "oid": "471f372751d5931e939320c211e35b7255f8fa8015125b3b3fd48ef43020257e",
+   "since": 1793916136,
    "size": 195490097,
    "sources": [
     "comma:master"
@@ -2326,6 +2362,7 @@
    "oid": "1563b85f6bd00d9e2edf50bdb69646f0d95d5ac0f218d5abe3fe54a13427d71b",
    "open": false,
    "pr": 39046,
+   "since": 1793916136,
    "size": 792485215,
    "sources": [
     "comma:pull"
@@ -2347,6 +2384,7 @@
     "bump tinygrad usb wrap fix (#39204)"
    ],
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:master"
@@ -2368,6 +2406,7 @@
     "Revert \"bump tinygrad and recompile Chestnut models (#39176)\" (#39184)"
    ],
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:master"
@@ -2391,6 +2430,7 @@
    "oid": "87fe86ca0813c099efddf9173ba503be2e40ea4c5362c36812a44141f4cb07d4",
    "open": false,
    "pr": 39047,
+   "since": 1793916136,
    "size": 792430559,
    "sources": [
     "comma:pull"
@@ -2435,6 +2475,7 @@
     "Light-speed 2 (#39236)"
    ],
    "oid": "909a140019050a9d7f00db22dd4f4085928d2af9474a82244672ddab964f95a8",
+   "since": 1793916136,
    "size": 768749892,
    "sources": [
     "comma:master",
@@ -2596,6 +2637,7 @@
     "BMRLNAP Model v2 (August 24, 2026)"
    ],
    "oid": "6afb28d58bfa7d7639832db8a61ff9209ef704ce1a9de2cdc20dd9004ec42bec",
+   "since": 1793916136,
    "size": 1757861459,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -2634,6 +2676,7 @@
    "open": false,
    "pr": 39045,
    "reason": "Mountain Dew (#39045) PR head: export ea1600cb was never published and comma no longer serves the pkl",
+   "since": 1793916136,
    "sources": [
     "comma:pull"
    ],
@@ -2735,6 +2778,7 @@
     "Cinque Terre V3 Model (September 17, 2026)"
    ],
    "oid": "404a18cfd86d29637d20c697dfde245bb47c666ae016730ab674c65f4d1e1aa4",
+   "since": 1793916136,
    "size": 766354845,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v26.json",
@@ -2765,6 +2809,7 @@
     "Be Right Here Model \ud83c\udfc3 (big) (#38499)"
    ],
    "oid": "10926f2c0911821ca0e72439c1c3bf3ec11f0a08789aa14b7ee8f25379b2afa4",
+   "since": 1793916136,
    "size": 1753235978,
    "sources": [
     "comma:master"
@@ -2786,6 +2831,7 @@
    "oid": "6274eb4a3f3eb7ad1ab341d222bbba2ba709b06645dbbd15ac4971d6cb22ab21",
    "open": true,
    "pr": 39173,
+   "since": 1793916136,
    "size": 792305602,
    "sources": [
     "comma:pull"
@@ -2807,6 +2853,7 @@
     "cinque terre model \ud83c\uddee\ud83c\uddf9  (#38771)"
    ],
    "oid": "e8d821733be15ebe9e27498bc27ad8bbbd741980ece37d77f377294010b8ff28",
+   "since": 1793916136,
    "size": 765950064,
    "sources": [
     "comma:master"
@@ -2826,6 +2873,7 @@
     "Cinque v3 (#38932)"
    ],
    "oid": "404a18cfd86d29637d20c697dfde245bb47c666ae016730ab674c65f4d1e1aa4",
+   "since": 1793916136,
    "size": 766354845,
    "sources": [
     "comma:master"
@@ -2870,6 +2918,7 @@
     "Light Speed Model v2 (October 29, 2026)"
    ],
    "oid": "6274eb4a3f3eb7ad1ab341d222bbba2ba709b06645dbbd15ac4971d6cb22ab21",
+   "since": 1793916136,
    "size": 792305602,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v28.json",
@@ -2892,6 +2941,7 @@
     "bump tinygrad (#39054)"
    ],
    "oid": "1563b85f6bd00d9e2edf50bdb69646f0d95d5ac0f218d5abe3fe54a13427d71b",
+   "since": 1793916136,
    "size": 792485215,
    "sources": [
     "comma:master"
@@ -2915,6 +2965,7 @@
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "open": false,
    "pr": 39184,
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:pull"
@@ -3070,6 +3121,7 @@
     "Happy Birthday Model (August 24, 2026)"
    ],
    "oid": "ae90227c1ba51d325a006e95c7c231c988198864a7b59fd1b62b2cc485d176f3",
+   "since": 1793916136,
    "size": 1757855836,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -3107,6 +3159,7 @@
     "Use upstream tinygrad disk tensors for model loading (#38956)"
    ],
    "oid": "c7b300083b8dd6ce17545ef52edb6b577e3a805e6372f9f9343090604690242f",
+   "since": 1793916136,
    "size": 766320181,
    "sources": [
     "comma:master"
@@ -3153,6 +3206,7 @@
    "oid": "ceb38c593005b3338aee4ca057d5ad9ee64c58f8fdba0b41641a9d4cc6c36e36",
    "open": true,
    "pr": 39106,
+   "since": 1793916136,
    "size": 792467570,
    "sources": [
     "comma:pull",
@@ -3198,6 +3252,7 @@
     "Light Speed Model (October 29, 2026)"
    ],
    "oid": "6274eb4a3f3eb7ad1ab341d222bbba2ba709b06645dbbd15ac4971d6cb22ab21",
+   "since": 1793916136,
    "size": 792305602,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v28.json",
@@ -3222,6 +3277,7 @@
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "open": false,
    "pr": 39087,
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:pull"
@@ -3245,6 +3301,7 @@
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "open": false,
    "pr": 39187,
+   "since": 1793916136,
    "size": 768750198,
    "sources": [
     "comma:pull"
@@ -3268,6 +3325,7 @@
    "oid": "909a140019050a9d7f00db22dd4f4085928d2af9474a82244672ddab964f95a8",
    "open": false,
    "pr": 39235,
+   "since": 1793916136,
    "size": 768749892,
    "sources": [
     "comma:pull"
@@ -3291,6 +3349,7 @@
    "oid": "1563b85f6bd00d9e2edf50bdb69646f0d95d5ac0f218d5abe3fe54a13427d71b",
    "open": false,
    "pr": 39054,
+   "since": 1793916136,
    "size": 792485215,
    "sources": [
     "comma:pull"
@@ -3312,6 +3371,7 @@
     "Revert \"Mountain Dew Model\" (#39046)"
    ],
    "oid": "1563b85f6bd00d9e2edf50bdb69646f0d95d5ac0f218d5abe3fe54a13427d71b",
+   "since": 1793916136,
    "size": 792485215,
    "sources": [
     "comma:master"
@@ -3335,6 +3395,7 @@
    "oid": "f3669cb7c8a9a8a13fcd6a8575958dd09a9ec76d9c9072ccdc76fad7cfa3a28d",
    "open": false,
    "pr": 38746,
+   "since": 1793916136,
    "size": 765955335,
    "sources": [
     "comma:pull"
@@ -3582,6 +3643,7 @@
     "BMRLNAP Model v4 (August 30, 2026)"
    ],
    "oid": "a086d5249fc308bb73993d1e64630c669d4c7df5bde85f42ad61902543648525",
+   "since": 1793916136,
    "size": 765953504,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",
@@ -3771,6 +3833,7 @@
     "test (July 01, 2026)"
    ],
    "oid": "a501760a9d1d5fef0eab2b8c5d122d06124fc26dc8e0782e0aa94b82a208f0ff",
+   "since": 1793916136,
    "size": 1757355221,
    "sources": [
     "comma:master",
@@ -3957,6 +4020,7 @@
     "Tee Time (August 18, 2026) (August 18, 2026)"
    ],
    "oid": "62345fa8406e318599cb62a8dccc3eb4f7e4cd6750638f2dcf7075c42798cf34",
+   "since": 1793916136,
    "size": 1757103461,
    "sources": [
     "sunnypilot-history:driving_models_chestnut_v22.json",

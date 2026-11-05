@@ -1,6 +1,7 @@
 {
  "models": [
   {
+   "build_time": "2026-11-05T21:21:11Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 20,
@@ -13,6 +14,7 @@
    "size": 768749892
   },
   {
+   "build_time": "2026-10-30T08:59:39Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 19,
@@ -25,6 +27,7 @@
    "size": 792305602
   },
   {
+   "build_time": "2026-10-24T18:35:41Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 17,
@@ -37,6 +40,7 @@
    "size": 768750198
   },
   {
+   "build_time": "2026-10-17T13:31:18Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 16,
@@ -49,6 +53,7 @@
    "size": 792467570
   },
   {
+   "build_time": "2026-10-13T17:13:02Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 12,
@@ -61,6 +66,7 @@
    "size": 766040736
   },
   {
+   "build_time": "2026-10-13T16:47:37Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 11,
@@ -73,6 +79,7 @@
    "size": 765950064
   },
   {
+   "build_time": "2026-10-13T19:24:05Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 10,
@@ -85,6 +92,7 @@
    "size": 765955335
   },
   {
+   "build_time": "2026-10-13T16:37:52Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 8,
@@ -97,6 +105,7 @@
    "size": 766082665
   },
   {
+   "build_time": "2026-10-13T18:42:51Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 7,
@@ -109,6 +118,7 @@
    "size": 1757861459
   },
   {
+   "build_time": "2026-10-13T17:37:33Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 6,
@@ -121,6 +131,7 @@
    "size": 1757861459
   },
   {
+   "build_time": "2026-10-13T18:10:39Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 5,
@@ -133,6 +144,7 @@
    "size": 1757855836
   },
   {
+   "build_time": "2026-10-13T19:40:15Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 4,
@@ -145,6 +157,7 @@
    "size": 1757087312
   },
   {
+   "build_time": "2026-10-13T17:54:27Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 3,
@@ -157,6 +170,7 @@
    "size": 1764417969
   },
   {
+   "build_time": "2026-10-13T18:26:41Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 2,
@@ -169,6 +183,7 @@
    "size": 1757101084
   },
   {
+   "build_time": "2026-10-13T19:10:52Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "2026 Deep RL Models",
    "index": 1,
@@ -181,6 +196,7 @@
    "size": 1757103461
   },
   {
+   "build_time": "2026-10-14T17:00:01Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "Master Models",
    "index": 14,
@@ -193,6 +209,7 @@
    "size": 792430559
   },
   {
+   "build_time": "2026-10-13T16:28:04Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "Master Models",
    "index": 13,
@@ -205,6 +222,7 @@
    "size": 766354845
   },
   {
+   "build_time": "2026-10-13T17:22:39Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "Master Models",
    "index": 9,
@@ -217,6 +235,7 @@
    "size": 765953504
   },
   {
+   "build_time": "2026-10-13T17:00:54Z",
    "catalog": "driving_models_chestnut_v28",
    "folder": "Master Models",
    "index": 0,
