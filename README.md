@@ -39,7 +39,8 @@ and every comma reads the answer.
 ## How a commit is resolved
 
 1. **override**: `overrides.json` says so. `{"refs": {"<ref>": {"oid": ..., "size": ...}}}`, or
-   `{"unavailable": "why"}` for one that cannot be had.
+   `{"unavailable": "why"}` for one that cannot be had, or `{"accept": "why"}` to keep a weaker
+   answer that can never be checked (it stays out of the issue).
 2. **tree**: the commit has `big_driving_supercombo.onnx` (under `openpilot/selfdrive/` or the
    pre-July-2026 `selfdrive/`). Its LFS pointer is the answer.
 3. **weights**: the commit has only `big_driving_tinygrad.pkl`. The pkl carries its ONNX's
@@ -80,7 +81,8 @@ A run with `history` also reads every version of every catalog either repo ever 
 ## When something does not resolve
 
 The run opens or updates the `unresolved` issue with what needs a human: commits nothing resolves,
-and pkls whose weights disagree with their own checkpoint. Fix one with an `overrides.json` entry;
+pkls whose weights disagree with their own checkpoint, and refs still pending or answered only by
+checkpoint or message two days after they turned up (a sign comma moved something the run reads). Fix one with an `overrides.json` entry;
 the issue closes itself on the next clean run. Everything else worth a look (pending downloads,
 checkpoint- or message-only answers, ties) goes to `notes.md` in the run's log.
 

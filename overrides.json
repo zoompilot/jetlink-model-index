@@ -2,6 +2,7 @@
  "folders": {},
  "refs": {
   "0e0c7c711d82992c98bcaea58e47bb50a255616a": {"unavailable": "Mountain Dew (#39045), reverted in #39046: export ea1600cb was never published and comma no longer serves the pkl"},
-  "bea3fd4f6e8429bb50e1e0fcb0a202a036c39335": {"unavailable": "Mountain Dew (#39045) PR head: export ea1600cb was never published and comma no longer serves the pkl"}
+  "bea3fd4f6e8429bb50e1e0fcb0a202a036c39335": {"unavailable": "Mountain Dew (#39045) PR head: export ea1600cb was never published and comma no longer serves the pkl"},
+  "4bfb53406352e2c8716ab06e23b57b4e3c00b45c": {"accept": "Mountain Dew V2 Preview, a force-pushed PR head: no one serves its pkl and sunnypilot never built it, so its message (870a4823) is all there is"}
  }
 }

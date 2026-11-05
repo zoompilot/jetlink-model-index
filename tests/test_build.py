@@ -52,3 +52,23 @@ def test_models_collapse_one_onnx_to_the_newest_entry(tmp_path, monkeypatch):
   })
   models = run.models(set(run.refs))
   assert [(m['ref'], m['name'], m['folder']) for m in models] == [('v2', 'Light Speed v2', 'Deep RL'), ('pr_new', '#10 Light speed 2', build.PR_FOLDER)]
+
+
+def test_unchecked_answers_reach_the_issue_after_two_days(tmp_path, monkeypatch):
+  monkeypatch.setattr(build, 'STATE', tmp_path / 'state.json')
+  monkeypatch.setattr(build, 'LIBRARY', tmp_path / 'library')
+  monkeypatch.setattr(build, 'OVERRIDES', tmp_path / 'overrides.json')
+  (tmp_path / 'overrides.json').write_text('{"refs": {"accepted": {"accept": "nothing else to go on"}}}')
+  run = build.Run(tmp_path, 0, False)
+  old, new = run.now - build.STALE - 1, run.now - 3600
+  by_message = {'status': 'resolved', 'oid': OID_A, 'method': 'message', 'names': ['x']}
+  run.refs.update({
+    'fresh': {**by_message, 'since': new},
+    'stale': {**by_message, 'since': old},
+    'stale_pending': {'status': 'pending', 'reason': 'download budget spent', 'since': old},
+    'stale_final': {'status': 'resolved', 'oid': OID_B, 'method': 'weights', 'since': old},
+    'accepted': {**by_message, 'since': old},
+  })
+  human, info = run.reports()
+  assert [line.split('`')[1] for line in human.splitlines()] == ['stale', 'stale_pending']
+  assert [line.split('`')[1] for line in info.splitlines()] == ['accepted', 'fresh']

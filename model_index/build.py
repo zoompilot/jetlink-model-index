@@ -56,6 +56,8 @@ FINAL = frozenset(METHODS[:4])
 RESULT = ('status', 'reason', 'oid', 'size', 'method', 'ambiguous', 'checkpoint_disagrees')
 ANCESTORS = 40
 GONE_RECHECK = 7 * 86400
+# a ref still unchecked by its weights this long after it turned up needs a human: something upstream moved
+STALE = 2 * 86400
 PROBE_THREADS = 16
 PR_FOLDER = 'comma Pull Requests'
 COMMIT_PATCH_URL = 'https://github.com/commaai/openpilot/commit/{ref}.patch'
@@ -146,6 +148,7 @@ def _folder(listing: dict) -> str | None:
 class Run:
   def __init__(self, work: Path, max_bytes: int, recheck: bool):
     self.work, self.budget, self.recheck = work, max_bytes, recheck
+    self.now = int(time.time())
     self.state = _read(STATE, {})
     self.refs: dict[str, dict] = self.state.setdefault('refs', {})
     self.pkls: dict[str, dict] = self.state.setdefault('pkls', {})
@@ -154,6 +157,8 @@ class Run:
     self.cache.setdefault('prs', {})
     overrides = _read(OVERRIDES, {})
     self.overrides, self.folders = overrides.get('refs', {}), overrides.get('folders', {})
+    # refs a human settled outright; an `accept` override only quiets the report
+    self.settled = {ref for ref, o in self.overrides.items() if 'unavailable' in o or 'oid' in o}
     self.library = {p.stem: _read(p, None) for p in sorted(LIBRARY.glob('*.json'))}
     self.exports: dict[str, dict] = {}
     self.notes: list[str] = []
@@ -194,6 +199,8 @@ class Run:
         e['artifacts'] = sorted({*map(tuple, e.get('artifacts', [])), *seen.artifacts})
       if seen.pr:
         e['pr'], e['open'] = seen.pr, seen.open
+    for e in self.refs.values():
+      e.setdefault('since', self.now)  # when it turned up, for STALE
 
   # --- the library -------------------------------------------------------
 
@@ -234,7 +241,7 @@ class Run:
     def keep(ref, future):
       self.refs[ref]['tree'] = future.result()
 
-    todo = [ref for ref, e in self.refs.items() if 'tree' not in e and ref not in self.overrides]
+    todo = [ref for ref, e in self.refs.items() if 'tree' not in e and ref not in self.settled]
     with ThreadPoolExecutor(PROBE_THREADS) as ex:
       for ref, future in [(ref, ex.submit(self.probe, ref)) for ref in todo]:
         self.guard(f'`{ref}`', keep, ref, future)
@@ -271,7 +278,7 @@ class Run:
 
   def resolve(self, ref: str) -> None:
     e = self.refs[ref]
-    if ref in self.overrides:
+    if ref in self.settled:
       o = self.overrides[ref]
       if 'unavailable' in o:
         settle(e, 'unavailable', reason=o['unavailable'])
@@ -413,15 +420,17 @@ class Run:
     human, info = [], []
     for ref, e in sorted(self.refs.items()):
       name = ', '.join(e.get('names', [])[:2]) or '(no name)'
+      stale = ref not in self.overrides and self.now - e.get('since', self.now) > STALE
+      days = f' for {(self.now - e.get("since", self.now)) // 86400} days' if stale else ''
       if e.get('status') == 'unresolved':
         human.append(f'- `{ref}` {name}: {e.get("reason", "")}')
       elif e.get('checkpoint_disagrees'):
         human.append(f'- `{ref}` {name}: its weights are {e["oid"][:12]}, but its pkl names checkpoint ONNX {e["checkpoint_disagrees"][:12]}')
       elif e.get('status') == 'pending':
-        info.append(f'- `{ref}` {name}: pending, {e.get("reason", "")}')
+        (human if stale else info).append(f'- `{ref}` {name}: pending{days}, {e.get("reason", "")}')
       elif e.get('method') in ('checkpoint', 'message'):
-        info.append(f'- `{ref}` {name}: {e["oid"][:12]} by {e["method"]} only, not yet checked by weights'
-                    + (f' (also names {", ".join(o[:12] for o in e["ambiguous"])})' if e.get('ambiguous') else ''))
+        (human if stale else info).append(f'- `{ref}` {name}: {e["oid"][:12]} by {e["method"]} only, not yet checked by weights{days}'
+                                          + (f' (also names {", ".join(o[:12] for o in e["ambiguous"])})' if e.get('ambiguous') else ''))
       elif e.get('ambiguous'):
         info.append(f'- `{ref}` {name}: weights fit {len(e["ambiguous"])} ONNX equally ({", ".join(o[:12] for o in e["ambiguous"])}), took {e["oid"][:12]}')
     return '\n'.join(human), '\n'.join(info + [f'- {n}' for n in self.notes])
