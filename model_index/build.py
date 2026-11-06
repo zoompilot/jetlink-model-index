@@ -20,7 +20,9 @@ A ref resolves by the most certain evidence it has (METHODS, best first):
 The first four are final; a ref resolved by the last two is tried again.
 
 The library is every ONNX comma has published: each export in its HuggingFace
-model repo, and each ONNX any known commit has in its tree. An ONNX is
+model repo, now or in its history, and each ONNX any known commit has in its
+tree. Only the current exports name a checkpoint or a message's export: a
+replaced one shares its path with what replaced it. An ONNX is
 downloaded once and only its fingerprint kept; a pkl is downloaded once and
 matched, and again only when the library grows. A commit's tree and messages
 never change, so each is read once and kept in state.json: a quiet hour costs
@@ -159,6 +161,7 @@ class Run:
     self.cache = _read(CACHE, {})
     self.cache.setdefault('catalogs', {})
     self.cache.setdefault('prs', {})
+    self.cache.setdefault('hf_commits', {})
     overrides = _read(OVERRIDES, {})
     self.overrides, self.folders = overrides.get('refs', {}), overrides.get('folders', {})
     # the model a Jetson runs with nothing picked, by its ref
@@ -483,6 +486,10 @@ def main(argv=None) -> int:
     run.exports = sources.huggingface_exports()
     for oid, x in run.exports.items():
       run.add_onnx(oid, x['size'], f'huggingface:{x["export"]}', x['export'])
+    replaced: dict[str, dict] = {}
+    run.guard('HuggingFace history', lambda: replaced.update(sources.huggingface_replaced(run.exports, run.cache['hf_commits'])))
+    for oid, x in replaced.items():
+      run.guard(f'replaced export {oid[:16]}', run.add_onnx, oid, x['size'], f'huggingface-replaced:{x["export"]}', x['export'])
     run.probe_all()
     # every ONNX in a tree joins the library before any pkl is matched against it
     for ref, e in sorted(run.refs.items()):

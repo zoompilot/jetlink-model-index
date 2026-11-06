@@ -9,7 +9,10 @@ Where big driving models turn up:
 - comma's pull requests that touch the big model, before they merge (Light
   Speed was a PR head when sunnypilot listed it, and was force-pushed after);
 - comma's master, every commit that changed the big ONNX or pkl;
-- comma's model repo on HuggingFace, the exports behind precompiled pkls;
+- comma's model repo on HuggingFace, the exports behind precompiled pkls,
+  and every export it ever held: an upload replaced under the same path
+  (1365126a/12864, 10-16, before Flip Flop's on 10-24) is still served, and a
+  fork may have built from it;
 - sunnypilot's model catalogs (every version, and with `history`, every
   version of every one it ever published);
 - jetlink's own extra catalog, whose models stay resolvable but are no
@@ -33,7 +36,9 @@ SP_RAW = f'https://raw.githubusercontent.com/{SP_MODELS}/refs/heads/gh-pages/doc
 CATALOG = re.compile(r'driving_models_(chestnut_)?v(\d+)\.json$')
 JETLINK = 'zoompilot/jetlink'
 JETLINK_EXTRA = f'https://raw.githubusercontent.com/{JETLINK}/refs/heads/main/catalog/extra_big_models.json'
-HF_TREE = f'https://huggingface.co/api/models/{lfs.DRIVING_MODELS_REPO}/tree/main?recursive=true'
+HF_API = f'https://huggingface.co/api/models/{lfs.DRIVING_MODELS_REPO}'
+HF_TREE = HF_API + '/tree/{revision}?recursive=true'
+HF_COMMITS = HF_API + '/commits/main?p={page}'
 _REF = re.compile(r'[0-9a-f]{40}')
 # what a catalog entry carries that a model list needs
 LISTING = ('short_name', 'display_name', 'is_20hz', 'index', 'minimum_selector_version', 'overrides', 'build_time', 'environment',
@@ -186,11 +191,27 @@ def comma_prs(found: dict[str, Seen], checked: dict[str, list], pages: int = 1) 
       seen.pr, seen.open = int(number), pr['state'] == 'open'
 
 
-def huggingface_exports() -> dict[str, dict]:
-  """oid -> {size, export} for every ONNX in comma's model repo."""
+def huggingface_exports(revision: str = 'main') -> dict[str, dict]:
+  """oid -> {size, export} for every ONNX in comma's model repo at `revision`."""
   exports = {}
-  for e in net.get_json(HF_TREE):
+  for e in net.get_json(HF_TREE.format(revision=revision)):
     lfs_info = e.get('lfs') or {}
     if e.get('path', '').endswith('.onnx') and lfs_info.get('oid'):
       exports[lfs_info['oid']] = {'size': int(lfs_info['size']), 'export': e['path']}
   return exports
+
+
+def huggingface_replaced(current: dict[str, dict], cache: dict, max_pages: int = 20) -> dict[str, dict]:
+  """The same for every ONNX an older commit of the repo held that `current`
+  does not. A commit's tree never changes, so each is read once into `cache`."""
+  replaced: dict[str, dict] = {}
+  for page in range(max_pages):
+    if not (commits := net.get_json(HF_COMMITS.format(page=page))):
+      break
+    for commit in commits:
+      if (tree := cache.get(commit['id'])) is None:
+        tree = cache[commit['id']] = huggingface_exports(commit['id'])
+      for oid, x in tree.items():
+        if oid not in current:
+          replaced.setdefault(oid, x)
+  return replaced
