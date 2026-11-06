@@ -38,7 +38,7 @@ JETLINK = 'zoompilot/jetlink'
 JETLINK_EXTRA = f'https://raw.githubusercontent.com/{JETLINK}/refs/heads/main/catalog/extra_big_models.json'
 HF_API = f'https://huggingface.co/api/models/{lfs.DRIVING_MODELS_REPO}'
 HF_TREE = HF_API + '/tree/{revision}?recursive=true'
-HF_COMMITS = HF_API + '/commits/main?p={page}'
+HF_COMMITS = HF_API + '/commits/main'
 _REF = re.compile(r'[0-9a-f]{40}')
 # what a catalog entry carries that a model list needs
 LISTING = ('short_name', 'display_name', 'is_20hz', 'index', 'minimum_selector_version', 'overrides', 'build_time', 'environment',
@@ -201,17 +201,20 @@ def huggingface_exports(revision: str = 'main') -> dict[str, dict]:
   return exports
 
 
-def huggingface_replaced(current: dict[str, dict], cache: dict, max_pages: int = 20) -> dict[str, dict]:
-  """The same for every ONNX an older commit of the repo held that `current`
-  does not. A commit's tree never changes, so each is read once into `cache`."""
-  replaced: dict[str, dict] = {}
-  for page in range(max_pages):
-    if not (commits := net.get_json(HF_COMMITS.format(page=page))):
+def huggingface_history(history: dict[str, dict], current: dict[str, dict], seen: dict[str, dict]) -> None:
+  """Into `history`, the same for every ONNX an older commit of the repo held
+  that `current` does not: replaced under its path, or deleted. A commit's
+  tree never changes, so each is read once into `seen`. Commits come newest
+  first, so the listing stops at the first one already read, and the new ones
+  are read oldest first: a run cut short leaves `seen` the history's tail."""
+  new = []
+  for commit in net.pages(HF_COMMITS):
+    if commit['id'] in seen:
       break
-    for commit in commits:
-      if (tree := cache.get(commit['id'])) is None:
-        tree = cache[commit['id']] = huggingface_exports(commit['id'])
-      for oid, x in tree.items():
-        if oid not in current:
-          replaced.setdefault(oid, x)
-  return replaced
+    new.append(commit['id'])
+  for commit in reversed(new):
+    seen[commit] = huggingface_exports(commit)
+  for tree in seen.values():
+    for oid, x in tree.items():
+      if oid not in current:
+        history.setdefault(oid, x)

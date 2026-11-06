@@ -78,13 +78,18 @@ def github(path: str):
 _NEXT = re.compile(r'<([^>]+)>;\s*rel="next"')
 
 
-def github_pages(path: str, max_pages: int = 50):
-  """Every item of a paginated GitHub list, following its Link header."""
-  url = f'{GITHUB_API}/{path.lstrip("/")}'
+def pages(url: str, headers: dict | None = None, max_pages: int = 50):
+  """Every item of a paginated JSON list, following its Link header (GitHub's
+  API and HuggingFace's both send one)."""
   for _ in range(max_pages):
-    body, headers = request(url, headers=GITHUB_HEADERS)
+    body, response = request(url, headers=headers)
     yield from _decode(url, body)
-    found = _NEXT.search(headers.get('Link') or '')
+    found = _NEXT.search(response.get('Link') or '')
     if not found:
       return
     url = found.group(1)
+
+
+def github_pages(path: str, max_pages: int = 50):
+  """Every item of a paginated GitHub list."""
+  return pages(f'{GITHUB_API}/{path.lstrip("/")}', GITHUB_HEADERS, max_pages)

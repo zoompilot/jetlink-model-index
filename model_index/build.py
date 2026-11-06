@@ -158,10 +158,10 @@ class Run:
     self.state = _read(STATE, {})
     self.refs: dict[str, dict] = self.state.setdefault('refs', {})
     self.pkls: dict[str, dict] = self.state.setdefault('pkls', {})
+    self.hf_commits: dict[str, dict] = self.state.setdefault('hf_commits', {})  # commit -> its tree's ONNX
     self.cache = _read(CACHE, {})
     self.cache.setdefault('catalogs', {})
     self.cache.setdefault('prs', {})
-    self.cache.setdefault('hf_commits', {})
     overrides = _read(OVERRIDES, {})
     self.overrides, self.folders = overrides.get('refs', {}), overrides.get('folders', {})
     # the model a Jetson runs with nothing picked, by its ref
@@ -484,12 +484,11 @@ def main(argv=None) -> int:
     run.merge(found, listings_fresh)
 
     run.exports = sources.huggingface_exports()
-    for oid, x in run.exports.items():
-      run.add_onnx(oid, x['size'], f'huggingface:{x["export"]}', x['export'])
-    replaced: dict[str, dict] = {}
-    run.guard('HuggingFace history', lambda: replaced.update(sources.huggingface_replaced(run.exports, run.cache['hf_commits'])))
-    for oid, x in replaced.items():
-      run.guard(f'replaced export {oid[:16]}', run.add_onnx, oid, x['size'], f'huggingface-replaced:{x["export"]}', x['export'])
+    history: dict[str, dict] = {}
+    run.guard('HuggingFace history', sources.huggingface_history, history, run.exports, run.hf_commits)
+    for tag, exports in (('huggingface', run.exports), ('huggingface-history', history)):
+      for oid, x in exports.items():
+        run.guard(f'export {oid[:16]}', run.add_onnx, oid, x['size'], f'{tag}:{x["export"]}', x['export'])
     run.probe_all()
     # every ONNX in a tree joins the library before any pkl is matched against it
     for ref, e in sorted(run.refs.items()):
