@@ -460,8 +460,16 @@
    },
    "library": "0554a9c495a18d84"
   },
+  "e0bfd7ba5d90950acbdf1cf264b6a25b234879fee286250570b4d63daa75ccba": {
+   "checkpoint": [
+    "f22e06e5-3b3f-48d2-a6b9-2f32dc20e707/56320",
+    "e51ab461-5c51-4002-add9-4f6f10752aab/16384"
+   ],
+   "full": {},
+   "library": "4c6f22c26073a79e"
+  },
   "e20cde17a9b0a397524c5f0745c5ac47393fd9db40d10f3ea928e6c1fafef4b7": {
-   "gone_at": 1793914715
+   "gone_at": 1794771099
   },
   "e6eb3c3d95e2ed3c532265b7baf096a689555e910ed087fda6a5129dbebe9690": {
    "checkpoint": [
@@ -501,6 +509,10 @@
     ]
    },
    "library": "0554a9c495a18d84"
+  },
+  "sunnypilot:9be99d2ffbdc5ec2183f48d1342bceca629b4717339d81b509a426c35b7c73e0": {
+   "full": {},
+   "library": "4c6f22c26073a79e"
   },
   "sunnypilot:9dc368ef20a3624dc94d8e604b0221789aaed6939f6f4075a651ffe060709192": {
    "full": {
@@ -1084,6 +1096,56 @@
      "3913109713cc782bdb001550a519f1fc6b36dbc7ade1cf6126622f044ff6adfb",
      766082665,
      "openpilot/selfdrive/modeld/models/big_driving_supercombo.onnx"
+    ]
+   }
+  },
+  "3471915de772c645d60a563cc3c335b17da1fe0b": {
+   "artifacts": [
+    [
+     "https://huggingface.co/datasets/sunnypilot/sunnypilot_models_v1/resolve/main/models/recompiled1/model-Fidx%20Driving%20Model%20%28November%2008%2C%202026%29-876/driving_fidx_driving_model_november_08_2026_tinygrad.pkl",
+     "9be99d2ffbdc5ec2183f48d1342bceca629b4717339d81b509a426c35b7c73e0"
+    ]
+   ],
+   "listing": {
+    "driving_models_chestnut_v28": {
+     "build_time": "2026-11-10T00:33:36Z",
+     "display_name": "Fidx Driving Model (November 08, 2026)",
+     "environment": "development",
+     "generation": "12",
+     "index": 21,
+     "is_20hz": true,
+     "minimum_selector_version": "21",
+     "overrides": {
+      "folder": "2026 Deep RL Models",
+      "lat": ".0",
+      "long": ".3"
+     },
+     "runner": "tinygrad",
+     "short_name": "FDM"
+    }
+   },
+   "messages": {
+    "diff": null,
+    "ids": [
+     "e51ab461"
+    ]
+   },
+   "names": [
+    "Fidx Driving Model (November 08, 2026)"
+   ],
+   "reason": "its weights match no known ONNX; it was built from checkpoint e51ab461-5c51-4002-add9-4f6f10752aab/16384, which comma has not published; it names export e51ab461, which comma has not published",
+   "since": 1794770996,
+   "sources": [
+    "sunnypilot:driving_models_chestnut_v28.json"
+   ],
+   "status": "unresolved",
+   "tree": {
+    "pkl": [
+     [
+      "e0bfd7ba5d90950acbdf1cf264b6a25b234879fee286250570b4d63daa75ccba",
+      767748319,
+      null
+     ]
     ]
    }
   },
