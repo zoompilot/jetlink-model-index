@@ -94,3 +94,21 @@ def test_unchecked_answers_reach_the_issue_after_two_days(tmp_path, monkeypatch)
   human, info = run.reports()
   assert [line.split('`')[1] for line in human.splitlines()] == ['stale', 'stale_pending']
   assert [line.split('`')[1] for line in info.splitlines()] == ['accepted', 'fresh']
+
+
+def test_a_listed_ref_without_an_onnx_reaches_the_issue(tmp_path, monkeypatch):
+  # Fidx (Nov 2026): sunnypilot listed a comma commit whose export comma never uploaded
+  monkeypatch.setattr(build, 'STATE', tmp_path / 'state.json')
+  monkeypatch.setattr(build, 'LIBRARY', tmp_path / 'library')
+  monkeypatch.setattr(build, 'OVERRIDES', tmp_path / 'overrides.json')
+  (tmp_path / 'overrides.json').write_text('{"default": "v2"}')
+  run = build.Run(tmp_path, 0, False)
+  listed = lambda name, index: {'driving_models_chestnut_v28': {'display_name': name, 'index': index}}  # noqa: E731
+  run.refs.update({
+    'v2': {'status': 'resolved', 'oid': OID_A, 'size': 1, 'method': 'tree', 'listing': listed('Light Speed v2', 19)},
+    'fidx': {'status': 'unresolved', 'reason': 'names export e51ab461, which comma has not published', 'names': ['Fidx'],
+             'listing': listed('Fidx', 21)},
+  })
+  human, _ = run.reports()
+  assert [line.split('`')[1] for line in human.splitlines()] == ['fidx']
+  assert [m['ref'] for m in run.index()['models']] == ['v2']

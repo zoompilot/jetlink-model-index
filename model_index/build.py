@@ -443,7 +443,8 @@ class Run:
   def reports(self) -> tuple[str, str]:
     """(what needs a human, everything else worth a look)."""
     human, info = [], []
-    if self.default and self.listed_default(self.models(set(self.refs)), {r: e for r, e in self.refs.items() if e.get('oid')}) is None:
+    resolved = {r: e for r, e in self.refs.items() if e.get('status') == 'resolved'}
+    if self.default and self.listed_default(self.models(set(resolved)), resolved) is None:
       human.append(f'- the default `{self.default}` (overrides.json) is not listed: a Jetson with nothing picked runs its own fallback')
     for ref, e in sorted(self.refs.items()):
       name = ', '.join(e.get('names', [])[:2]) or '(no name)'
