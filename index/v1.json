@@ -2,6 +2,22 @@
  "default": "b92fc4828664f8767bce5e92f1630ed319cbe509",
  "models": [
   {
+   "build_time": "2026-11-19T09:20:12Z",
+   "catalog": "driving_models_chestnut_v28",
+   "environment": "development",
+   "folder": "2026 Deep RL Models",
+   "generation": "12",
+   "index": 22,
+   "is_20hz": true,
+   "minimum_selector_version": "21",
+   "name": "Fairy tale model (November 18, 2026)",
+   "oid": "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41",
+   "ref": "57a0a395cad83c026405fa460e5e542791d1ffd1",
+   "runner": "tinygrad",
+   "short_name": "FTM",
+   "size": 766137036
+  },
+  {
    "build_time": "2026-11-05T21:21:11Z",
    "catalog": "driving_models_chestnut_v28",
    "environment": "development",
@@ -399,6 +415,10 @@
    "export": null,
    "size": 1757855836
   },
+  "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41": {
+   "export": "e0623b24-06b0-46e7-9f2b-79d38cfea203/32768/big_driving_supercombo.onnx",
+   "size": 766137036
+  },
   "c392ba1aa1b4b89e850366024fa6c1beac1f1fdc3a7182e3c3b0234c55e08eeb": {
    "export": "870a4823-d2ec-4b9a-8015-b947e9901fc7/12864/big_driving_supercombo.onnx",
    "size": 792487890
@@ -429,6 +449,11 @@
    "method": "weights",
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "size": 768750198
+  },
+  "03fd773f295fa69697094c7aefac7a9e0fc9c08b": {
+   "method": "weights",
+   "oid": "909a140019050a9d7f00db22dd4f4085928d2af9474a82244672ddab964f95a8",
+   "size": 768749892
   },
   "17476effed0a1433ea596c79a581f150ce54fa5f": {
    "method": "weights",
@@ -509,6 +534,11 @@
    "method": "tree",
    "oid": "a501760a9d1d5fef0eab2b8c5d122d06124fc26dc8e0782e0aa94b82a208f0ff",
    "size": 1757355221
+  },
+  "57a0a395cad83c026405fa460e5e542791d1ffd1": {
+   "method": "weights",
+   "oid": "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41",
+   "size": 766137036
   },
   "5edc0bd89d0830bc1ac86ee923d1d08d2915b770": {
    "method": "tree",
@@ -669,6 +699,11 @@
    "method": "weights",
    "oid": "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199",
    "size": 768750198
+  },
+  "d739e474a3fd3df31b4e1d0db19c60d8d835d57c": {
+   "method": "weights",
+   "oid": "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41",
+   "size": 766137036
   },
   "db06f5f36caa379e112bafd38423e37b66fa4149": {
    "method": "tree",

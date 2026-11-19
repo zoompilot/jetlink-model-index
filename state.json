@@ -71,6 +71,52 @@
    }
   },
   "4dec20dd1c691db87872dfb550b881c3a18b4352": {},
+  "7403afab439b7d87053813aa47ad95e98ab360c0": {
+   "01effc679eb46d6036ce0302673a87fe2dcfcc95a679daeeb929679e53c3647a": {
+    "export": "96244b1f-6c4e-4adc-848d-eccd0b44b182/12800/big_driving_supercombo.onnx",
+    "size": 814591107
+   },
+   "350a47ea36e554fb71634c7361b2c2a2a3da07ecb211a4c6cff3d2c3013d1d82": {
+    "export": "26ada517-d522-4c97-b358-c91c34bf40b1/16384/big_driving_supercombo.onnx",
+    "size": 69671018
+   },
+   "35976b11be3904eb78e32f7dc55a6abf8e9433ac5aa391a1998f1e9ce001b199": {
+    "export": "1365126a-e71e-4778-be00-8ab92dc82c09/12864/big_driving_supercombo.onnx",
+    "size": 768750198
+   },
+   "404a18cfd86d29637d20c697dfde245bb47c666ae016730ab674c65f4d1e1aa4": {
+    "export": "f78ed37d-afad-4dbc-8050-40ea885eedde/12864/big_driving_supercombo.onnx",
+    "size": 766354845
+   },
+   "6274eb4a3f3eb7ad1ab341d222bbba2ba709b06645dbbd15ac4971d6cb22ab21": {
+    "export": "f22b8b34-0983-4185-a453-a87b73798d61/16384/big_driving_supercombo.onnx",
+    "size": 792305602
+   },
+   "87fe86ca0813c099efddf9173ba503be2e40ea4c5362c36812a44141f4cb07d4": {
+    "export": "8d736683-fed4-4e48-96fd-eae5d9d5bc56/12864/big_driving_supercombo.onnx",
+    "size": 792430559
+   },
+   "909a140019050a9d7f00db22dd4f4085928d2af9474a82244672ddab964f95a8": {
+    "export": "ea2f516f-f758-42be-a245-913bb818a64f/32768/big_driving_supercombo.onnx",
+    "size": 768749892
+   },
+   "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41": {
+    "export": "e0623b24-06b0-46e7-9f2b-79d38cfea203/32768/big_driving_supercombo.onnx",
+    "size": 766137036
+   },
+   "c392ba1aa1b4b89e850366024fa6c1beac1f1fdc3a7182e3c3b0234c55e08eeb": {
+    "export": "870a4823-d2ec-4b9a-8015-b947e9901fc7/12864/big_driving_supercombo.onnx",
+    "size": 792487890
+   },
+   "c7b300083b8dd6ce17545ef52edb6b577e3a805e6372f9f9343090604690242f": {
+    "export": "1a421175-db71-4e3d-9d62-e2166421b02b/12864/big_driving_supercombo.onnx",
+    "size": 766320181
+   },
+   "ceb38c593005b3338aee4ca057d5ad9ee64c58f8fdba0b41641a9d4cc6c36e36": {
+    "export": "6b5b705f-4a05-4f30-9c37-9c51b8dc5ffc/12800/big_driving_supercombo.onnx",
+    "size": 792467570
+   }
+  },
   "81a9ad0139976653c041de50b60f1160a873869e": {
    "404a18cfd86d29637d20c697dfde245bb47c666ae016730ab674c65f4d1e1aa4": {
     "export": "f78ed37d-afad-4dbc-8050-40ea885eedde/12864/big_driving_supercombo.onnx",
@@ -273,6 +319,19 @@
   }
  },
  "pkls": {
+  "16882f1695767f3727e042cdeb73a3329ea956bcee9be2e721fadff262266a3b": {
+   "checkpoint": [
+    "f22e06e5-3b3f-48d2-a6b9-2f32dc20e707/56320",
+    "e0623b24-06b0-46e7-9f2b-79d38cfea203/32768"
+   ],
+   "full": {
+    "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41": [
+     0.9963,
+     true
+    ]
+   },
+   "library": "7b7ad6ed4edbd97d"
+  },
   "256f2178366479a211933701c03518621ed3970289e6a8a43e5a2bcb15e55b5f": {
    "checkpoint": [
     "f22e06e5-3b3f-48d2-a6b9-2f32dc20e707/56320",
@@ -508,7 +567,7 @@
     "e51ab461-5c51-4002-add9-4f6f10752aab/16384"
    ],
    "full": {},
-   "library": "1aa347a8462b4996"
+   "library": "7b7ad6ed4edbd97d"
   },
   "e20cde17a9b0a397524c5f0745c5ac47393fd9db40d10f3ea928e6c1fafef4b7": {
    "gone_at": 1794771099
@@ -554,7 +613,7 @@
   },
   "sunnypilot:9be99d2ffbdc5ec2183f48d1342bceca629b4717339d81b509a426c35b7c73e0": {
    "full": {},
-   "library": "1aa347a8462b4996"
+   "library": "7b7ad6ed4edbd97d"
   },
   "sunnypilot:9dc368ef20a3624dc94d8e604b0221789aaed6939f6f4075a651ffe060709192": {
    "full": {
@@ -584,6 +643,28 @@
      [
       "898b5cfd1393f54fc269a9223f47b448e434e591a0dd1bc563f8c7cbe8f5cdfd",
       767246067,
+      null
+     ]
+    ]
+   }
+  },
+  "03fd773f295fa69697094c7aefac7a9e0fc9c08b": {
+   "method": "weights",
+   "names": [
+    "Revert \"e0623b24-06b0-46e7-9f2b-79d38cfea203\""
+   ],
+   "oid": "909a140019050a9d7f00db22dd4f4085928d2af9474a82244672ddab964f95a8",
+   "since": 1795095231,
+   "size": 768749892,
+   "sources": [
+    "comma:master"
+   ],
+   "status": "resolved",
+   "tree": {
+    "pkl": [
+     [
+      "b4dead3ee091d66ab002a6b8e716c26f4f79e3c931e4be5f48e017ba92f6e960",
+      767228907,
       null
      ]
     ]
@@ -1717,6 +1798,56 @@
      "a501760a9d1d5fef0eab2b8c5d122d06124fc26dc8e0782e0aa94b82a208f0ff",
      1757355221,
      "openpilot/selfdrive/modeld/models/big_driving_supercombo.onnx"
+    ]
+   }
+  },
+  "57a0a395cad83c026405fa460e5e542791d1ffd1": {
+   "artifacts": [
+    [
+     "https://huggingface.co/datasets/sunnypilot/sunnypilot_models_v1/resolve/main/models/recompiled1/model-Fairy%20tale%20model%20%28November%2018%2C%202026%29-899/driving_fairy_tale_model_november_18_2026_tinygrad.pkl",
+     "1d4d221563002c73f3ba7f2e48be350c887898f254f558c406aeeaadb8a868f2"
+    ]
+   ],
+   "listing": {
+    "driving_models_chestnut_v28": {
+     "build_time": "2026-11-19T09:20:12Z",
+     "display_name": "Fairy tale model (November 18, 2026)",
+     "environment": "development",
+     "generation": "12",
+     "index": 22,
+     "is_20hz": true,
+     "minimum_selector_version": "21",
+     "overrides": {
+      "folder": "2026 Deep RL Models",
+      "lat": ".0",
+      "long": ".3"
+     },
+     "runner": "tinygrad",
+     "short_name": "FTM"
+    }
+   },
+   "method": "weights",
+   "names": [
+    "#39415 Fairy Tale Model",
+    "Fairy tale model (November 18, 2026)"
+   ],
+   "oid": "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41",
+   "open": true,
+   "pr": 39415,
+   "since": 1795095231,
+   "size": 766137036,
+   "sources": [
+    "comma:pull",
+    "sunnypilot:driving_models_chestnut_v28.json"
+   ],
+   "status": "resolved",
+   "tree": {
+    "pkl": [
+     [
+      "16882f1695767f3727e042cdeb73a3329ea956bcee9be2e721fadff262266a3b",
+      764592225,
+      null
+     ]
     ]
    }
   },
@@ -3439,6 +3570,28 @@
      [
       "f0667cf6cf7827db467f7a5212620b876477cfea172257dcd97e26132344a3a4",
       775663355,
+      null
+     ]
+    ]
+   }
+  },
+  "d739e474a3fd3df31b4e1d0db19c60d8d835d57c": {
+   "method": "weights",
+   "names": [
+    "e0623b24-06b0-46e7-9f2b-79d38cfea203"
+   ],
+   "oid": "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41",
+   "since": 1795095231,
+   "size": 766137036,
+   "sources": [
+    "comma:master"
+   ],
+   "status": "resolved",
+   "tree": {
+    "pkl": [
+     [
+      "16882f1695767f3727e042cdeb73a3329ea956bcee9be2e721fadff262266a3b",
+      764592225,
       null
      ]
     ]
