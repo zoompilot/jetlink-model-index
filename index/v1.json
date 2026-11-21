@@ -320,6 +320,19 @@
    "runner": "tinygrad",
    "short_name": "LM",
    "size": 1757355221
+  },
+  {
+   "environment": "development",
+   "folder": "comma Pull Requests",
+   "generation": "12",
+   "is_20hz": true,
+   "name": "#39415 Fairy Tale Model",
+   "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
+   "pr": 39415,
+   "ref": "be5faaedf153f7f1d1303d2b74f20b1b784605aa",
+   "runner": "tinygrad",
+   "short_name": "#39415",
+   "size": 766137036
   }
  ],
  "onnx": {
@@ -417,6 +430,10 @@
   },
   "bc125a9af33033ded89ac1886e27dbbe296da285275b2eb8fc0b5edb35b56c41": {
    "export": "e0623b24-06b0-46e7-9f2b-79d38cfea203/32768/big_driving_supercombo.onnx",
+   "size": 766137036
+  },
+  "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7": {
+   "export": "3f1a78e6-9a79-4d85-b796-1cd573bd5a3a/32768/big_driving_supercombo.onnx",
    "size": 766137036
   },
   "c392ba1aa1b4b89e850366024fa6c1beac1f1fdc3a7182e3c3b0234c55e08eeb": {
@@ -659,6 +676,11 @@
    "method": "tree",
    "oid": "6afb28d58bfa7d7639832db8a61ff9209ef704ce1a9de2cdc20dd9004ec42bec",
    "size": 1757861459
+  },
+  "be5faaedf153f7f1d1303d2b74f20b1b784605aa": {
+   "method": "weights",
+   "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
+   "size": 766137036
   },
   "bf3e3631b3f91d92a1020a5e0dd4298b93ff4244": {
    "method": "weights",
