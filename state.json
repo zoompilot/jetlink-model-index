@@ -628,7 +628,7 @@
    "library": "8a53003bdc4cd62f"
   },
   "e20cde17a9b0a397524c5f0745c5ac47393fd9db40d10f3ea928e6c1fafef4b7": {
-   "gone_at": 1794771099
+   "gone_at": 1795386949
   },
   "e62c2ae933bd6d3e7a4b3c548a8b6b90ebf9aee7420bb9cbafbd2b2e1e9379bc": {
    "checkpoint": [
@@ -3045,6 +3045,28 @@
     ]
    }
   },
+  "af90646a4a02a93ab48d34a3fc017a9414ac79b9": {
+   "method": "weights",
+   "names": [
+    "Fairy Tale Model (#39415)"
+   ],
+   "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
+   "since": 1795386947,
+   "size": 766137036,
+   "sources": [
+    "comma:master"
+   ],
+   "status": "resolved",
+   "tree": {
+    "pkl": [
+     [
+      "e62c2ae933bd6d3e7a4b3c548a8b6b90ebf9aee7420bb9cbafbd2b2e1e9379bc",
+      764592225,
+      null
+     ]
+    ]
+   }
+  },
   "afedebcfd4213a76b99b1f11b5310ed05cee04df": {
    "method": "weights",
    "names": [
@@ -3361,7 +3383,7 @@
     "Fairy Tale Model v1.1 (November 20, 2026)"
    ],
    "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
-   "open": true,
+   "open": false,
    "pr": 39415,
    "since": 1795260431,
    "size": 766137036,
