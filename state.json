@@ -3331,9 +3331,34 @@
    }
   },
   "be5faaedf153f7f1d1303d2b74f20b1b784605aa": {
+   "artifacts": [
+    [
+     "https://huggingface.co/datasets/sunnypilot/sunnypilot_models_v1/resolve/main/models/recompiled1/model-Fairy%20Tale%20Model%20v1.1%20%28November%2020%2C%202026%29-909/driving_fairy_tale_model_v1_1_november_20_2026_tinygrad.pkl",
+     "de0f219f53a8e0f57ac5052a802f39f26c9469c290107006fc8c3f34ca1dd776"
+    ]
+   ],
+   "listing": {
+    "driving_models_chestnut_v28": {
+     "build_time": "2026-11-22T04:42:30Z",
+     "display_name": "Fairy Tale Model v1.1 (November 20, 2026)",
+     "environment": "development",
+     "generation": "12",
+     "index": 23,
+     "is_20hz": true,
+     "minimum_selector_version": "21",
+     "overrides": {
+      "folder": "2026 Deep RL Models",
+      "lat": ".0",
+      "long": ".3"
+     },
+     "runner": "tinygrad",
+     "short_name": "FTMV1.1"
+    }
+   },
    "method": "weights",
    "names": [
-    "#39415 Fairy Tale Model"
+    "#39415 Fairy Tale Model",
+    "Fairy Tale Model v1.1 (November 20, 2026)"
    ],
    "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
    "open": true,
@@ -3341,7 +3366,8 @@
    "since": 1795260431,
    "size": 766137036,
    "sources": [
-    "comma:pull"
+    "comma:pull",
+    "sunnypilot:driving_models_chestnut_v28.json"
    ],
    "status": "resolved",
    "tree": {
@@ -4111,7 +4137,7 @@
      "display_name": "ETCW Driving (November 21, 2026)",
      "environment": "development",
      "generation": "12",
-     "index": 23,
+     "index": 24,
      "is_20hz": true,
      "minimum_selector_version": "21",
      "overrides": {
@@ -4123,10 +4149,14 @@
      "short_name": "ED"
     }
    },
+   "messages": {
+    "diff": null,
+    "ids": []
+   },
    "names": [
     "ETCW Driving (November 21, 2026)"
    ],
-   "reason": "its weights match no known ONNX; it was built from checkpoint dff05387-0aca-4769-abde-afa3e98f6f17/32768, which comma has not published, and its commit could not be read: https://github.com/commaai/openpilot/commit/f50b5f1923deb9cd553b91dfac8f52ffa9c3420b.patch: HTTP Error 503: Service Unavailable",
+   "reason": "its weights match no known ONNX; it was built from checkpoint dff05387-0aca-4769-abde-afa3e98f6f17/32768, which comma has not published",
    "since": 1795307380,
    "sources": [
     "sunnypilot:driving_models_chestnut_v28.json"

@@ -2,6 +2,22 @@
  "default": "b92fc4828664f8767bce5e92f1630ed319cbe509",
  "models": [
   {
+   "build_time": "2026-11-22T04:42:30Z",
+   "catalog": "driving_models_chestnut_v28",
+   "environment": "development",
+   "folder": "2026 Deep RL Models",
+   "generation": "12",
+   "index": 23,
+   "is_20hz": true,
+   "minimum_selector_version": "21",
+   "name": "Fairy Tale Model v1.1 (November 20, 2026)",
+   "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
+   "ref": "be5faaedf153f7f1d1303d2b74f20b1b784605aa",
+   "runner": "tinygrad",
+   "short_name": "FTMV1.1",
+   "size": 766137036
+  },
+  {
    "build_time": "2026-11-19T09:20:12Z",
    "catalog": "driving_models_chestnut_v28",
    "environment": "development",
@@ -320,19 +336,6 @@
    "runner": "tinygrad",
    "short_name": "LM",
    "size": 1757355221
-  },
-  {
-   "environment": "development",
-   "folder": "comma Pull Requests",
-   "generation": "12",
-   "is_20hz": true,
-   "name": "#39415 Fairy Tale Model",
-   "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
-   "pr": 39415,
-   "ref": "be5faaedf153f7f1d1303d2b74f20b1b784605aa",
-   "runner": "tinygrad",
-   "short_name": "#39415",
-   "size": 766137036
   }
  ],
  "onnx": {
@@ -798,6 +801,6 @@
   "0e0c7c711d82992c98bcaea58e47bb50a255616a": "Mountain Dew (#39045), reverted in #39046: export ea1600cb was never published and comma no longer serves the pkl",
   "3471915de772c645d60a563cc3c335b17da1fe0b": "its weights match no known ONNX; it was built from checkpoint e51ab461-5c51-4002-add9-4f6f10752aab/16384, which comma has not published; it names export e51ab461, which comma has not published",
   "bea3fd4f6e8429bb50e1e0fcb0a202a036c39335": "Mountain Dew (#39045) PR head: export ea1600cb was never published and comma no longer serves the pkl",
-  "f50b5f1923deb9cd553b91dfac8f52ffa9c3420b": "its weights match no known ONNX; it was built from checkpoint dff05387-0aca-4769-abde-afa3e98f6f17/32768, which comma has not published, and its commit could not be read: https://github.com/commaai/openpilot/commit/f50b5f1923deb9cd553b91dfac8f52ffa9c3420b.patch: HTTP Error 503: Service Unavailable"
+  "f50b5f1923deb9cd553b91dfac8f52ffa9c3420b": "its weights match no known ONNX; it was built from checkpoint dff05387-0aca-4769-abde-afa3e98f6f17/32768, which comma has not published"
  }
 }
