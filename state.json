@@ -505,6 +505,14 @@
    },
    "library": "0554a9c495a18d84"
   },
+  "9e405fe98a2db567a24c951b1b537f6c4f425689c8a65eff4410f825498698a8": {
+   "checkpoint": [
+    "f22e06e5-3b3f-48d2-a6b9-2f32dc20e707/56320",
+    "dff05387-0aca-4769-abde-afa3e98f6f17/32768"
+   ],
+   "full": {},
+   "library": "8a53003bdc4cd62f"
+  },
   "a5fc6813f45be5673382d6571a5fc598a7cd8e47c534101fbc3a45767c169c53": {
    "checkpoint": [
     "b9facbcc-4d47-410e-b3ce-dfcbad12ba92/56320",
@@ -686,6 +694,10 @@
     ]
    },
    "library": "0554a9c495a18d84"
+  },
+  "sunnypilot:b42fec8f405c8f1d98c8a5ad8ca14c99d94b3de460461113f894f4366dd72520": {
+   "full": {},
+   "library": "8a53003bdc4cd62f"
   }
  },
  "refs": {
@@ -4081,6 +4093,50 @@
      [
       "51420a138242fe57dc4c2d2530ae8edb74afbd46f3282be8995ee3b603b79c04",
       799942038,
+      null
+     ]
+    ]
+   }
+  },
+  "f50b5f1923deb9cd553b91dfac8f52ffa9c3420b": {
+   "artifacts": [
+    [
+     "https://huggingface.co/datasets/sunnypilot/sunnypilot_models_v1/resolve/main/models/recompiled1/model-ETCW%20Driving%20%28November%2021%2C%202026%29-905/driving_etcw_driving_november_21_2026_tinygrad.pkl",
+     "b42fec8f405c8f1d98c8a5ad8ca14c99d94b3de460461113f894f4366dd72520"
+    ]
+   ],
+   "listing": {
+    "driving_models_chestnut_v28": {
+     "build_time": "2026-11-22T00:06:36Z",
+     "display_name": "ETCW Driving (November 21, 2026)",
+     "environment": "development",
+     "generation": "12",
+     "index": 23,
+     "is_20hz": true,
+     "minimum_selector_version": "21",
+     "overrides": {
+      "folder": "2026 Deep RL Models",
+      "lat": ".0",
+      "long": ".3"
+     },
+     "runner": "tinygrad",
+     "short_name": "ED"
+    }
+   },
+   "names": [
+    "ETCW Driving (November 21, 2026)"
+   ],
+   "reason": "its weights match no known ONNX; it was built from checkpoint dff05387-0aca-4769-abde-afa3e98f6f17/32768, which comma has not published, and its commit could not be read: https://github.com/commaai/openpilot/commit/f50b5f1923deb9cd553b91dfac8f52ffa9c3420b.patch: HTTP Error 503: Service Unavailable",
+   "since": 1795307380,
+   "sources": [
+    "sunnypilot:driving_models_chestnut_v28.json"
+   ],
+   "status": "unresolved",
+   "tree": {
+    "pkl": [
+     [
+      "9e405fe98a2db567a24c951b1b537f6c4f425689c8a65eff4410f825498698a8",
+      767219870,
       null
      ]
     ]
