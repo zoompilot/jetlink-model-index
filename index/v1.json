@@ -336,6 +336,19 @@
    "runner": "tinygrad",
    "short_name": "LM",
    "size": 1757355221
+  },
+  {
+   "environment": "development",
+   "folder": "comma Pull Requests",
+   "generation": "12",
+   "is_20hz": true,
+   "name": "#39490 Fairy Tale 2",
+   "oid": "d2523a08c8228028358d260368f28c69afbf2b9210a32df4e9afcacb9b528737",
+   "pr": 39490,
+   "ref": "66bb29396d9e42e5531b9f9bdac3388908810431",
+   "runner": "tinygrad",
+   "short_name": "#39490",
+   "size": 749774001
   }
  ],
  "onnx": {
@@ -358,6 +371,10 @@
   "1791d5940b2c048d0639813426dd2cf1d6f2a6727ed51e17c8bcea8bbe754123": {
    "export": null,
    "size": 765950064
+  },
+  "1855f69bc25badbae458dc557b1887bb14499eb04bfd1f2d8636a48af7cb3ed0": {
+   "export": "2e54b310-8aec-4921-940d-050e97d73506/24576/big_driving_supercombo.onnx",
+   "size": 749637338
   },
   "1c90cac0bb2b8f25940b3cca3be41704b90a42857fc9e735b7df1d6983ae2554": {
    "export": null,
@@ -450,6 +467,10 @@
   "ceb38c593005b3338aee4ca057d5ad9ee64c58f8fdba0b41641a9d4cc6c36e36": {
    "export": "6b5b705f-4a05-4f30-9c37-9c51b8dc5ffc/12800/big_driving_supercombo.onnx",
    "size": 792467570
+  },
+  "d2523a08c8228028358d260368f28c69afbf2b9210a32df4e9afcacb9b528737": {
+   "export": "2e54b310-8aec-4921-940d-050e97d73506/24576/big_driving_supercombo.onnx",
+   "size": 749774001
   },
   "dcd96339cae7ca50a04377be1edd9574d9cba1cbec5ab91b142d77bd5248d6b9": {
    "export": null,
@@ -585,6 +606,11 @@
    "oid": "dcd96339cae7ca50a04377be1edd9574d9cba1cbec5ab91b142d77bd5248d6b9",
    "size": 1757087312
   },
+  "66bb29396d9e42e5531b9f9bdac3388908810431": {
+   "method": "weights",
+   "oid": "d2523a08c8228028358d260368f28c69afbf2b9210a32df4e9afcacb9b528737",
+   "size": 749774001
+  },
   "68b5f8e48602f4f88041efd7de6c99e97fda454e": {
    "method": "tree",
    "oid": "e8d821733be15ebe9e27498bc27ad8bbbd741980ece37d77f377294010b8ff28",
@@ -649,6 +675,11 @@
    "method": "tree",
    "oid": "471f372751d5931e939320c211e35b7255f8fa8015125b3b3fd48ef43020257e",
    "size": 195490097
+  },
+  "a7c2a1f1dd777c0e7ccaa09476e63e8e14c99354": {
+   "method": "weights",
+   "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
+   "size": 766137036
   },
   "a98ef068c1d3c2a202a5a869448bb1af63cdc7a4": {
    "method": "weights",
@@ -719,6 +750,11 @@
    "method": "weights",
    "oid": "6274eb4a3f3eb7ad1ab341d222bbba2ba709b06645dbbd15ac4971d6cb22ab21",
    "size": 792305602
+  },
+  "ce7bd51bd24284523610da91e7df672a7ca0c6be": {
+   "method": "weights",
+   "oid": "be6030a8b0c6a5a0d8b77675c6f1bd652ccfc32c818fbb914b2bc4a8799345b7",
+   "size": 766137036
   },
   "d05c2d971b15ef29a329a6fcce46cc1e64e10778": {
    "method": "weights",
